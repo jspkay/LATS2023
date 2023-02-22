@@ -1,0 +1,198 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/salvo/Documenti/Tesi/hardware_models/fire_generator
+T_opt
+!s110 1661674889
+VDPAZoEOEOkZb`SdSdEmzS1
+04 2 2 work tb tb 1
+=1-000ae431a4f1-630b2589-2515-34d9
+!s124 OEM10U13 
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Ecounter
+Z2 w1659967333
+Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R1
+Z6 8../counter/counter.vhd
+Z7 F../counter/counter.vhd
+l0
+L5 1
+V0]KHJIbE1eB11n_S<a3EZ0
+!s100 YWCceaza6@gXVOgOoGoAk2
+Z8 OL;C;2021.2;73
+33
+Z9 !s110 1659971122
+!i10b 1
+Z10 !s108 1659971122.000000
+Z11 !s90 -2008|../counter/counter.vhd|
+Z12 !s107 ../counter/counter.vhd|
+!i113 0
+Z13 o-2008
+Z14 tExplicit 1 CvgOpt 0
+Acounter
+R3
+R4
+R5
+DEx4 work 7 counter 0 22 0]KHJIbE1eB11n_S<a3EZ0
+!i122 2
+l14
+L13 14
+V>aeA;SZ?FbFcYaSZFa_hI1
+!s100 DG<Pz=kCUmoUgOdAzJA0d2
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Edigital_comparator
+Z15 w1659971417
+R3
+R4
+R5
+!i122 8
+R1
+Z16 8../digital_comparator/digital_comparator.vhd
+Z17 F../digital_comparator/digital_comparator.vhd
+l0
+L5 1
+VZLJ9dOTZ0bfNShE2`bi0B0
+!s100 iW=[J@M6oKPL@CakI78Y42
+R8
+33
+Z18 !s110 1659971706
+!i10b 1
+Z19 !s108 1659971706.000000
+Z20 !s90 -2008|../digital_comparator/digital_comparator.vhd|
+Z21 !s107 ../digital_comparator/digital_comparator.vhd|
+!i113 0
+R13
+R14
+Adigital_comparator
+R3
+R4
+R5
+DEx4 work 18 digital_comparator 0 22 ZLJ9dOTZ0bfNShE2`bi0B0
+!i122 8
+l15
+L14 5
+Vb8=INWX<2lQc>Fdc?]IfB1
+!s100 3zL?c3n^QN3bcUFWeNOig2
+R8
+33
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R13
+R14
+Efire_generator
+Z22 w1659980785
+R3
+R4
+R5
+!i122 28
+R1
+Z23 8fire_generator.vhd
+Z24 Ffire_generator.vhd
+l0
+L5 1
+VHk]Bi4Tf2Mf0kHT8KQ7XJ1
+!s100 M8YHA`[de21fhje=THFTa2
+R8
+33
+Z25 !s110 1659980785
+!i10b 1
+Z26 !s108 1659980785.000000
+Z27 !s90 -2008|-lint|-2008|fire_generator.vhd|
+Z28 !s107 fire_generator.vhd|
+!i113 0
+Z29 o-2008 -lint -2008
+R14
+Afire_generator
+R3
+R4
+R5
+DEx4 work 14 fire_generator 0 22 Hk]Bi4Tf2Mf0kHT8KQ7XJ1
+!i122 28
+l34
+L15 34
+Vf?nKejlQl5?ElKcWzRb?93
+!s100 1=mE^R_Jafo@Y0Jke^XQi0
+R8
+33
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 0
+R29
+R14
+Etb
+Z30 w1659963902
+R5
+R4
+R3
+!i122 15
+R1
+Z31 8fire_generator_tb.vhd
+Z32 Ffire_generator_tb.vhd
+l0
+L5 1
+V3H03Jf2WojVJYoNhRCj102
+!s100 O5;L`>^h]6_VzF34OhLSA0
+R8
+33
+Z33 !s110 1659976592
+!i10b 1
+Z34 !s108 1659976592.000000
+Z35 !s90 -2008|fire_generator.vhd|fire_generator_tb.vhd|
+Z36 !s107 fire_generator_tb.vhd|fire_generator.vhd|
+!i113 0
+R13
+R14
+Atb
+R5
+R4
+R3
+DEx4 work 2 tb 0 22 3H03Jf2WojVJYoNhRCj102
+!i122 15
+l18
+L7 28
+V4Qa=Fc]lNFRhXVb3BV8QM0
+!s100 gb^c=jQWzS;PKRgDb59BD3
+R8
+33
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 0
+R13
+R14

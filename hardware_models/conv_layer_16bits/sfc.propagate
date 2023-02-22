@@ -1,0 +1,53 @@
+#!/bin/bash
+ficID=$(cat ficID)
+
+faultID=$1
+stimulusID=$2
+envID=$3
+
+filename=$(printf "env%04d" $stimulusID)
+goldDir="data/SEQUENCES_GOLD_16/$filename"
+outDir="./FAULTY_$ficID/$filename/$faultID" 
+
+fault_cmd=$(cat "faults/fault_$faultID")
+channel=$(echo $fault_cmd | cut -d'(' -f2 | cut -d')' -f1)
+
+### preparation
+for i in {1..6}
+do
+	cp "${goldDir}/ACTIVATED_$i" "${outDir}/HW_SIM_ACTIVATED_$i.DAT"
+done
+
+echo "$envID - Waiting for the directory..."
+while [ ! -d queue/$faultID-$stimulusID ]; do :; done;
+mv queue/$faultID-$stimulusID/HW_SIM_OUTPUT*.DAT $outDir # The file was renominated by the simulation script
+if [[ $? -ne 0 ]]
+then
+	echo "$envID - exiting."
+	exit 10
+fi
+
+rmdir queue/$faultID-$stimulusID
+
+### report
+sub "$goldDir/OUTPUT_$channel" "$outDir/HW_SIM_OUTPUT_$channel.DAT" > "$outDir/differences_OUTPUT_$channel.txt"
+a=$?
+activate_16 "$outDir/HW_SIM_OUTPUT_$channel.DAT" "$outDir/HW_SIM_ACTIVATED_$channel.DAT"
+echo sub "$goldDir/ACTIVATED_$channel" "$outDir/HW_SIM_ACTIVATED_$channel.DAT"
+sub "$goldDir/ACTIVATED_$channel" "$outDir/HW_SIM_ACTIVATED_$channel.DAT" > "$outDir/differences_ACTIVATED_$channel.txt"
+b=$?
+
+echo "$envID - Report: $a $b"
+exit 0
+### actual propagation
+./data/n2d2_test_16 ./data/dummy.pgm --first-layer-from-file $outDir --save-prob-vector "$outDir/probabilities.txt" > /dev/null 2>&1
+
+### compression for space reduction
+# zipDir=$(pwd)
+cd $outDir
+#compressActivated.py HW_SIM_ACTIVATED*.DAT > /dev/null && rm HW_SIM_ACTIVATED*.DAT
+#compressOutput.py HW_SIM_OUTPUT*.DAT > /dev/null && rm HW_SIM_OUTPUT*.DAT
+zip -m differences differences* > /dev/null
+zip -m HW_SIM HW_SIM* > /dev/null
+
+exit 0

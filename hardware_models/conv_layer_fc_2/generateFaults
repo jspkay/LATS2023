@@ -1,0 +1,37 @@
+#!/bin/python3
+
+import os
+import random
+
+"""
+We generate faults statring from the other fault campaign faults. We want the faults to be in the same PE but on a random output bit (among the possible 32). So, c_mat(i,j) is the vertical line connecting elements P(i,j) to P(i+1,j), where both i and j starts at 1.
+Our result signal is a matrix whose indeces start at 0. With reference on c_mat(i,j), we inject the fault in element P(i+1,j).
+So, the corresponding P(i+1,j) w.r.t. result signal is result(i, j-1), since its indeces start at 0.
+
+NOTE: This means that an element of the first row can never be affected by any faults (as was the case for fault_campaign 1).
+"""
+
+d="../conv_layer_fc_1/faults/"
+newDir = "./faults/"
+
+random.seed(1)
+
+for file in os.listdir(d):
+    f = open(d+file)
+    line = f.readline()
+    f.close()
+    #print(line[0:44])
+
+    x=line.split("c_mat")[1].replace('(','').replace(')','').split(',')[0];
+
+    y=line.split("c_mat")[1].split(",")[1].split(")")[0]
+   
+    value = line.split(" ")[3];
+
+    newLine="{}result({},{})({}) {}".format(line[0:44], x, int(y)-1, random.randrange(1,33), value)
+    print(newLine)
+    f=open(newDir+file, "w")
+    f.write(newLine)
+    f.close()
+
+    

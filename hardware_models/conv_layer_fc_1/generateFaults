@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ ! -d faults ]
+then
+	echo "Directory faults dosn't exist. Making it"
+	mkdir faults
+fi
+
+for i in {1..200}
+do
+	fangy fault_list.template --seed $i --output faults/fault_$i
+done

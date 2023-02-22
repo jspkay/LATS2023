@@ -1,0 +1,1 @@
+vsim -c work.counter_tb -voptargs="+acc" -do "log -r /*; run 1 ms; log -flush; quit;"

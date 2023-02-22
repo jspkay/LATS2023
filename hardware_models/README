@@ -1,0 +1,32 @@
+This directory contains all the vhdl models used for the hardware implementation of the network.
+There are different levels of complexity, depending on the 
+
+The main project contains all the folders named `conv_layer[_fc_x]` where `_fc_` indicates whether a fault campain was conducted and the `x` indicates the type of campain as explained in the next section
+
+## Fault campaings
+The faults campaigns are in the folders `conv_layer_fc_x`. In the following there is a list associating each value of `x` with the specific campaign. In addition to that, in each folder `conv_laery_fc_x` you can find a `README` file explaining in detail the contucted study.
+
+1. The faults are stuck-at and are injected in the input of the weights for some processing elements.
+2. The faults are stuck-at and are injected in the output of the processing elements.
+3. The systolic array is reduced in size (from 28x28 to 14x14) and stuck-at are injected in the input of the weights for some processing elements.
+
+
+## How to run
+The each fault campaing has its own "start_fault_campaign" executable. It is a bash script which iterates over each fault for each stimuli saving the results in a specific directory.
+
+In order to execute a campaign, you need to have three binaries in your path:
+- sub (which is a custom program for computing differences between two files which have the same format),
+- activate (which is a script to simulate the activation of the Convolutional layer,
+- fangy, the fault generator.
+
+`sub` and `activate` can be found in conv_layer[_fc_x]/sources directory.
+`fangy` can bin found in `../fault_generator`.
+
+For building each of those, refer to the related README.
+
+# PhD update
+The same experiments have been updated for another study. In this context we will study the reliability of the systolic architecture with respect to its area. Three experiments are performed, always with 1'200 faults on 1'000 (most probably 500) stimuli.
+1. 28x28 array
+2. 14x14 array
+3. 7x7 array
+4. 3x3 array

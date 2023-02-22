@@ -1,0 +1,9 @@
+# vsim -c work.tb -do "force -freeze /tb/CL/channels_generate(1)/C/systolicArray/c_mat(23,21)(8) 1; run 2.5 us; q" 
+# Start time: 17:01:12 on Dec 12,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Error (suppressible): ./conv_layer_tb.vhd(31): (vopt-1127) Entity work.conv_layer was not selected for default binding because it is out of date relative to dependency thesis.bitarrays. 
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 17:01:13 on Dec 12,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

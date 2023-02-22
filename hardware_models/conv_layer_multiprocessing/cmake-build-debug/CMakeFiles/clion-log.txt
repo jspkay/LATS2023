@@ -1,0 +1,4 @@
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=make -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -G "CodeBlocks - Unix Makefiles" -S /home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing -B /home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug

@@ -1,0 +1,1 @@
+vsim -c work.tb -voptargs="+acc" -do "log -r /*; run 2us; log -flush; quit"

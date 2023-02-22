@@ -1,0 +1,1 @@
+force -freeze /tb/CL/channels_generate(3)/C/systolicArray/c_mat(20,16)(4) 1;

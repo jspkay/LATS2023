@@ -1,0 +1,270 @@
+# vsim -c work.tb -do "#force -freeze /tb/CL/channels_generate(1)/C/systolicArray/c_mat(5,15)(1) 0; run 5 us; q" 
+# Start time: 15:52:07 on Nov 16,2022
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading work.tb(tb)#1
+# Loading std.env(body)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading thesis.bitarrays(body)
+# Loading thesis.filefunctions(body)
+# Loading work.conv_layer(conv_layer)#1
+# Loading work.rom(rom)#29
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_MAIN_SEQ.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/mainSequence File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/mainSequence File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/mainSequence File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_MAIN_SEQ.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/mainSequence File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_2.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(2)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(2)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(2)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_2.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(2)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_3.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(3)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(3)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(3)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_3.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(3)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_4.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(4)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(4)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(4)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_4.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(4)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_5.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(5)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(5)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(5)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_5.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(5)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_6.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(6)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(6)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(6)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_6.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(6)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_7.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(7)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(7)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(7)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_7.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(7)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_8.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(8)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(8)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(8)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_8.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(8)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_9.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(9)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(9)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(9)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_9.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(9)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_10.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(10)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(10)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(10)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_10.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(10)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_11.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(11)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(11)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(11)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_11.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(11)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_12.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(12)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(12)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(12)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_12.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(12)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_13.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(13)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(13)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(13)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_13.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(13)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_14.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(14)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(14)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(14)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_14.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(14)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_15.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(15)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(15)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(15)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_15.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(15)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_16.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(16)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(16)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(16)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_16.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(16)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_17.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(17)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(17)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(17)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_17.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(17)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_18.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(18)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(18)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(18)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_18.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(18)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_19.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(19)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(19)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(19)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_19.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(19)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_20.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(20)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(20)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(20)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_20.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(20)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_21.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(21)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(21)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(21)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_21.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(21)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_22.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(22)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(22)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(22)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_22.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(22)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_23.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(23)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(23)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(23)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_23.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(23)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_24.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(24)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(24)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(24)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_24.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(24)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_25.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(25)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(25)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(25)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_25.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(25)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_26.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(26)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(26)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(26)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_26.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(26)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_27.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(27)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(27)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(27)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_27.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(27)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/HW_SIM_SEQ_28.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(28)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 159
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(28)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 96 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(28)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/HW_SIM_SEQ_28.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/otherSeqs(28)/otherSequences File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: Reading file ./data/HW_SIM_FILES/WEIGHTS_1.DAT...
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/channels_generate(1)/C/weightsMemory File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File finished when counter was 55
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/channels_generate(1)/C/weightsMemory File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: File ended before filling the memory. 200 additional zero padding added. 
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/channels_generate(1)/C/weightsMemory File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# ** Note: ROM Setup finished. file(./data/HW_SIM_FILES/WEIGHTS_1.DAT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb/CL/channels_generate(1)/C/weightsMemory File: /home/salvo/Documenti/Tesi/hardware_models/conv_layer_fc_1/../rom/rom.vhd
+# Loading work.j_shift_register(j_shift_register)#1
+# Loading work.systolic_generic(behavior)#1
+# Loading work.p(p)#1
+#force -freeze /tb/CL/channels_generate(1)/C/systolicArray/c_mat(5,15)(1) 0
+#  run 5 us
+# ** Note: File ./data/HW_SIM_FILES/HW_SIM_OUTPUT_1.DAT opened successfully
+#    Time: 2185 ns  Iteration: 1  Instance: /tb/CL/channels_generate(1)/C
+# ** Note: Finished writing ./data/HW_SIM_FILES/HW_SIM_OUTPUT_1.DAT. 28 lines wrote. 
+#    Time: 2185 ns  Iteration: 1  Instance: /tb/CL/channels_generate(1)/C
+# End time: 15:52:08 on Nov 16,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

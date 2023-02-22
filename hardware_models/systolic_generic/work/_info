@@ -1,0 +1,189 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/salvo/Documenti/Tesi/hardware_models/systolic_generic
+T_opt
+!s110 1660378731
+V=cHoAD6Oi=eiUVn_@N`R70
+04 2 9 work tb behaviour 1
+=1-000ae431a4f1-62f75e6b-a6950-2e59
+!s124 OEM10U35 
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+R1
+Ep
+Z2 w1661808525
+Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 153
+R1
+Z6 8systolic_generic.vhd
+Z7 Fsystolic_generic.vhd
+l0
+L5 1
+VOh>j[EINgenffb?UT1NzY0
+!s100 T@`WI;1]>h`Nd_LWZzSVP3
+Z8 OL;C;2021.2;73
+33
+Z9 !s110 1661808525
+!i10b 1
+Z10 !s108 1661808525.000000
+Z11 !s90 -2008|-lint|-2008|systolic_generic.vhd|
+Z12 !s107 systolic_generic.vhd|
+!i113 0
+Z13 o-2008 -lint -2008
+Z14 tExplicit 1 CvgOpt 0
+Ap
+R3
+R4
+R5
+Z15 DEx4 work 1 p 0 22 Oh>j[EINgenffb?UT1NzY0
+!i122 153
+l48
+L16 48
+VC]UI9MT5b@n5OW[05k[5W3
+!s100 BA<H50VY95YnNzMZ?X_fC1
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Abehave
+R3
+R4
+R5
+DEx4 work 1 p 0 22 <_B;hYCGi2_?6YUaW>R:P2
+!i122 22
+l15
+L14 16
+Velch4LRHbMkR]j1bBG5Bk1
+!s100 ?gMa<eYkJH367be685a@K3
+R8
+33
+!s110 1660147148
+!i10b 1
+!s108 1660147148.000000
+Z16 !s90 -2008|systolic_generic.vhd|systolic_generic_tb.vhd|
+Z17 !s107 systolic_generic_tb.vhd|systolic_generic.vhd|
+!i113 0
+Z18 o-2008
+R14
+w1659881597
+Esystolic_generic
+R2
+Z19 DPx6 thesis 9 bitarrays 0 22 CkDzTUz]FThT]IMIOiTI22
+R3
+R4
+R5
+!i122 153
+R1
+R6
+R7
+l0
+L72 1
+VM>=ikBN>A[M>@`6=VZRj?2
+!s100 NQ7FI>`0H5SLU@cdF;Lml2
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Abehavior
+R19
+R3
+R4
+R5
+DEx4 work 16 systolic_generic 0 22 M>=ikBN>A[M>@`6=VZRj?2
+!i122 153
+l106
+L86 85
+V@=X]Ih27lVlV@A]>C8_X20
+!s100 6[KGm[01KQVkICO0iLoUF1
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Etb
+Z20 w1660378641
+R19
+R3
+R4
+R5
+!i122 151
+R1
+Z21 8systolic_generic_tb.vhd
+Z22 Fsystolic_generic_tb.vhd
+l0
+L8 1
+V_Hf9FzS2O9m_a^KRVTYEj0
+!s100 L2]]dGWlaE53fAY9e@jKh0
+R8
+33
+Z23 !s110 1660378729
+!i10b 1
+Z24 !s108 1660378729.000000
+R16
+R17
+!i113 0
+R18
+R14
+Abehaviour
+R19
+R3
+R4
+R5
+DEx4 work 2 tb 0 22 _Hf9FzS2O9m_a^KRVTYEj0
+!i122 151
+l56
+L11 72
+VeFV:IdnPdIm=`:;Rl264N3
+!s100 6SfEWdkLM;5kPNcWgBDPJ1
+R8
+33
+R23
+!i10b 1
+R24
+R16
+R17
+!i113 0
+R18
+R14

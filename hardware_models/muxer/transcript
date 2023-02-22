@@ -1,0 +1,28 @@
+# vsim -c work.tb -voptargs="+acc" -do "log -r /*; run 100 ns; q" 
+# Start time: 15:08:54 on Aug 30,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb(tb)#1
+# Loading work.muxer(muxer)#1
+# log -r /*
+#  run 100 ns
+#  q
+# End time: 15:08:55 on Aug 30,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

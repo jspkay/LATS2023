@@ -1,0 +1,124 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/s.pappalardo/first/adder
+T_opt
+!s110 1657704398
+VcLV09ZGS>49Z1>1eja9>P0
+04 15 4 work full_adder_n_tb fast 0
+=1-44a8422d4cb0-62ce8fce-a0a8b-e64
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5c_4;63
+vadder_tb
+Z2 !s110 1657704397
+!i10b 1
+!s100 z1D<V05=VDn:EgWSoM:n@0
+I:b<k8:_zkgOfZ87M^e=Nd1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1657698684
+8./adder_tb.vh
+F./adder_tb.vh
+L0 1
+Z4 OL;L;10.5c_4;63
+r1
+!s85 0
+31
+Z5 !s108 1657704397.000000
+Z6 !s107 ./full_adder_n_tb.vh|./adder.vh|./adder_tb.vh|./adder_nbits.vh|
+Z7 !s90 ./adder_nbits.vh|./adder_tb.vh|./adder.vh|./full_adder_n_tb.vh|
+!i113 0
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vfull_adder
+R2
+!i10b 1
+!s100 cG<ZcYTf=iTKg7@T^[^0^2
+ISQ`OdeT^GMFM^Yhal3U4b2
+R3
+R0
+Z9 w1657697583
+Z10 8./adder.vh
+Z11 F./adder.vh
+L0 11
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R1
+vfull_adder_n_tb
+R2
+!i10b 1
+!s100 ;`Q@OafkD?>aL_846^9oI1
+I^`BhH;T8VP8bU`@LJ8>aX3
+R3
+R0
+w1657704394
+8./full_adder_n_tb.vh
+F./full_adder_n_tb.vh
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R1
+vfull_adder_nbits
+R2
+!i10b 1
+!s100 ^g6E0XV7[Z>J8o^RbU77m2
+I`4LMoh7A^8;46`VWDT[NB0
+R3
+R0
+w1657702035
+8./adder_nbits.vh
+F./adder_nbits.vh
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R1
+vhalf_adder
+R2
+!i10b 1
+!s100 F7DzmRzKkfRW]gG_=jV;a1
+IB1kO@gkCI3>[?l>b=g@_70
+R3
+R0
+R9
+R10
+R11
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R1

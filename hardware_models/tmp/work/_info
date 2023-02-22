@@ -1,0 +1,65 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/salvo/Documenti/Tesi/hardware_models/tmp
+T_opt
+!s110 1660919783
+Vj800QMfOQV__NVk5?olzc0
+04 2 2 work tb tb 1
+=1-000ae431a4f1-62ff9fe7-55adf-56f4
+!s124 OEM10U1 
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Etb
+Z1 w1660919775
+Z2 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+R0
+Z5 8tmp.vhd
+Z6 Ftmp.vhd
+l0
+L6 1
+V=hPzB3=e=EBC33ZFF54]30
+!s100 Fb`;mW[D695b:3h4fEbkY2
+Z7 OL;C;2021.2;73
+33
+Z8 !s110 1660919779
+!i10b 1
+Z9 !s108 1660919779.000000
+Z10 !s90 -2008|tmp.vhd|
+Z11 !s107 tmp.vhd|
+!i113 0
+Z12 o-2008
+Z13 tExplicit 1 CvgOpt 0
+Atb
+R2
+R3
+R4
+DEx4 work 2 tb 0 22 =hPzB3=e=EBC33ZFF54]30
+!i122 3
+l11
+L8 21
+VkKmP0aLd0b;0A;LizA;Im1
+!s100 CLYKcP29kCG@0^2`ZW?VJ1
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13

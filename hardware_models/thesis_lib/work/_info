@@ -1,0 +1,101 @@
+m255
+K4
+z2
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/salvo/Documenti/Tesi/hardware_models/thesis_lib
+Pbitarrays
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+Z4 w1669743116
+R0
+Z5 8./package_bitArrays.vhd
+Z6 F./package_bitArrays.vhd
+l0
+L9 1
+V9lYo65mkGKABNjVjWi8513
+!s100 8[;2S8nELl2YjQUHbBZMG2
+Z7 OL;C;2021.2;73
+33
+b1
+Z8 !s110 1670427236
+!i10b 1
+Z9 !s108 1670427236.000000
+Z10 !s90 -2008|./package_bitArrays.vhd|./package_fileFunctions.vhd|
+Z11 !s107 ./package_fileFunctions.vhd|./package_bitArrays.vhd|
+!i113 0
+Z12 o-2008
+Z13 tExplicit 1 CvgOpt 0
+Bbody
+Z14 DPx4 work 9 bitarrays 0 22 9lYo65mkGKABNjVjWi8513
+R1
+R2
+R3
+!i122 4
+l0
+Z15 L46 1
+Z16 V2@;Zg<K]0a>j?d3SRnlb82
+Z17 !s100 aQ5@5;VS1oWHOfcN8V4IU3
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Pfilefunctions
+Z18 DPx6 thesis 9 bitarrays 0 22 9lYo65mkGKABNjVjWi8513
+R3
+R1
+R2
+!i122 4
+Z19 w1670427166
+R0
+Z20 8./package_fileFunctions.vhd
+Z21 F./package_fileFunctions.vhd
+l0
+L10 1
+VEZ3G@5_S[VO;ih<l:HP>Z2
+!s100 75>]P]5_z4nMZ8MnRzZ>j3
+R7
+33
+b1
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Bbody
+Z22 DPx4 work 13 filefunctions 0 22 EZ3G@5_S[VO;ih<l:HP>Z2
+R18
+R3
+R1
+R2
+!i122 4
+l0
+Z23 L27 1
+V5`hb69KmM0A=Vz3B6QE<N2
+!s100 04WP7k077:hW3SLEXDV`Z0
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13

@@ -1,0 +1,6 @@
+vsim -c work.jsr_tb -voptargs="+acc" -do "
+	log -r /*;
+	run 1 us;
+	log -flush;
+	quit;"
+

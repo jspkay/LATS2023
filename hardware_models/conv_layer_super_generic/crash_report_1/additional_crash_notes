@@ -1,0 +1,4 @@
+Nonostante il file transcript.bak indichi chiaramente che env0763 con fault_22 sia stato processato, non c'è traccia dei file.
+
+!!! Aggiornamento!!!!
+È ovvio che quei file non ci siano perché lo script non è mai arrivato a copiarli nella cartella giusta. Sono invece rimasti in HW_SIM_FILES

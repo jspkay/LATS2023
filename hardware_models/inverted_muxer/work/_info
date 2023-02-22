@@ -1,0 +1,114 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/salvo/Documenti/Tesi/hardware_models/inverted_muxer
+T_opt
+!s110 1661802525
+VWRIiKPQRAWcjFXoW14egN3
+04 2 2 work tb tb 1
+=1-000ae431a4f1-630d181d-20c6d-e757
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Einverted_muxer
+Z2 w1661802177
+Z3 DPx6 thesis 9 bitarrays 0 22 CkDzTUz]FThT]IMIOiTI22
+Z4 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 9
+R1
+Z7 8inverted_muxer.vhd
+Z8 Finverted_muxer.vhd
+l0
+L8 1
+VPVdKFcmY848O0N9YKMER`0
+!s100 LLELAlX9H`JbnfH6VbY1J2
+Z9 OL;C;2021.2;73
+33
+Z10 !s110 1661802519
+!i10b 1
+Z11 !s108 1661802519.000000
+Z12 !s90 -2008|inverted_muxer.vhd|muxer_tb.vhd|
+Z13 !s107 muxer_tb.vhd|inverted_muxer.vhd|
+!i113 0
+Z14 o-2008
+Z15 tExplicit 1 CvgOpt 0
+Amuxer
+R3
+R4
+R5
+R6
+DEx4 work 14 inverted_muxer 0 22 PVdKFcmY848O0N9YKMER`0
+!i122 9
+l18
+L16 9
+VFiRML>UH>^K]YYSbY`eZ40
+!s100 J2cP^Z?0kRUb4k[0C?=>e2
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Etb
+Z16 w1661802515
+R4
+R5
+R6
+!i122 9
+R1
+Z17 8muxer_tb.vhd
+Z18 Fmuxer_tb.vhd
+l0
+L5 1
+VB3??`7e3IdQDEa2TAC@_42
+!s100 iGgVMLBjAkKfVY1BD`2lM3
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Atb
+DEx4 work 2 tb 0 22 B3??`7e3IdQDEa2TAC@_42
+R4
+R5
+R6
+R3
+!i122 9
+l24
+L10 32
+V^PK7JYZ4IlAH4[ESI8KZA2
+!s100 6BjU<V0HN]4fi5l1OC0T23
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15

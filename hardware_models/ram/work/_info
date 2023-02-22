@@ -1,0 +1,125 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/salvo/Documenti/Tesi/hardware_models/ram
+T_opt
+!s110 1668626081
+V_;6?;8c88=<5PfIN@hX=o1
+04 2 2 work tb tb 1
+=1-000ae431a4f1-637536a1-883ca-d3b7
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Eram
+Z2 w1668626073
+Z3 DPx6 thesis 13 filefunctions 0 22 EZ3G@5_S[VO;ih<l:HP>Z2
+Z4 DPx6 thesis 9 bitarrays 0 22 CkDzTUz]FThT]IMIOiTI22
+Z5 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+!i122 16
+R1
+Z8 8ram.vhd
+Z9 Fram.vhd
+l0
+L11 1
+VJC`@7md402UmlIjIY;?I71
+!s100 2ZH^UFGb[o2D4:PP2>S111
+Z10 OL;C;2021.2;73
+33
+Z11 !s110 1668626079
+!i10b 1
+Z12 !s108 1668626079.000000
+Z13 !s90 -2008|ram.vhd|ram_tb.vhd|
+Z14 !s107 ram_tb.vhd|ram.vhd|
+!i113 0
+Z15 o-2008
+Z16 tExplicit 1 CvgOpt 0
+Aram
+R3
+R4
+R5
+R6
+R7
+DEx4 work 3 ram 0 22 JC`@7md402UmlIjIY;?I71
+!i122 16
+l23
+L21 14
+VjF4:I3M4zONGG:0hj=gC62
+!s100 6C5o1`EFDLN3nNoQiEk=o3
+R10
+33
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Etb
+Z17 w1668624634
+Z18 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+R5
+R7
+R6
+!i122 16
+R1
+Z19 8ram_tb.vhd
+Z20 Fram_tb.vhd
+l0
+L6 1
+V4eR31dSD2_2S]6l?6XB9l1
+!s100 PSaM2zSdiBNZm9Ieh9gZj0
+R10
+33
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Atb
+R18
+R5
+R7
+R6
+DEx4 work 2 tb 0 22 4eR31dSD2_2S]6l?6XB9l1
+!i122 16
+l24
+L8 31
+V0;0z:<9M@TPgmkZOOH1=W1
+!s100 V9C1PE5zPFaB]W95CCn:a0
+R10
+33
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16

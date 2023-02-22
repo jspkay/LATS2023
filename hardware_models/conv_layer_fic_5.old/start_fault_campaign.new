@@ -1,0 +1,182 @@
+#!/bin/sh
+
+fault_campaign_id=5
+
+#################### PREPARATION
+
+if [[ -z ${1+c} ]]
+then
+	echo "Fault campaign selected is $fault_campaign_id"
+	echo "Do you confirm this is the correcto one? [y/N]"
+	read confirmation
+	if [ "$confirmation" != "y" ]
+	then
+		exit 1
+	fi
+	a=1
+else
+	a=$1
+fi
+
+#################### MAIN CYCLE START
+# Note that the main cycle is implemented by 
+# calling `exec` on the same script with 
+# a progressive argument.
+
+## variables 
+basedir="data"
+simDir="./HW_SIM_FILES"
+
+## check for the weights to be in place, generate otherwise
+if [ $(ls $simDir/prov_WEIGHTS* | wc -l) -ne 6 ]
+then
+	echo -n "File $simDir/prov_WEIGHTS_1.DAT doesn't exist! Generating weights..." 
+	./${basedir}/n2d2_test $basedir/dummy.pgm  --only-first-layer --save-weights $simDir > /dev/null 2>&1
+
+	printf "moving WEIGHTS_x.DAT to prov_WEIGHTS_x.DAT... "
+	for i in {1..6}
+	do
+		mv "$simDir/WEIGHTS_$i.DAT" "$simDir/prov_WEIGHTS_$i.DAT"
+	done
+
+	printf "OK. Starting the script...\n"
+fi
+
+
+## main cycle check stop 
+totLen=$(( $(ls faults/ | wc -l) + 1 )) 
+echo $totLen - $a
+perc=$(python3 -c "print('{0:.3}'.format(($a-1)/$totLen))")
+if [[ $a -gt $totLen ]]
+then
+	echo "Finished!!!"
+	exit 0
+fi
+echo "Round $a - $(date)" >> longtime_report
+
+# the main cycle process a single stimulus over all the faults
+fault_file=$(ls faults | head -n $a | tail -n1)
+fn=$(echo $fault_file | cut -d'_' -f2) # Fault number
+fault_cmd=$(cat faults/$fault_file) # actual fault
+
+generateRandomStimuliList.py -i data/stimuli.db -k 10 -o stimuli.list -s $fn data/stimuli #PYTHON
+
+# Input sequences are generated on the fly for each main cycle
+printf "Processing $fault_file. Generating input sequences..."
+
+	# for each stimulus, we make a simulation
+	for stimulus in $(cat stimuli.list)
+	do
+		
+		startTime=$(date +%s%3N) #time statistics
+
+		### STIMULUS PREPARATION
+		filename=$(basename "${stimulus%.*}")
+		# goldDir contains all the golden simulation. It is useful for propagating the
+		# simulated result (first layer, one channel) on the rest of the network
+		goldDir="${basedir}/SEQUENCES_GOLD/$filename"
+		if [ ! -e "$goldDir/HW_SIM_MAIN_SEQ.DAT" ]
+		then
+			echo "File $filename/HW_SIM_MAIN_SEQ.DAT doesn't exist! Run n2d2_test first!"
+			continue;
+		fi
+		generateInputSequences.py $stimulus -o $simDir -r 7 -c 7 -z 27 > /dev/null
+
+		### VARIABLES
+		outDir="./FAULTY_$fault_campaign_id/$filename/$fn" # prepare output directory
+		
+		channel=$(echo $fault_cmd | cut -d'(' -f2 | cut -d')' -f1) # channel (between the 6) to be analysed
+		fault_cmd=${fault_cmd/channels_generate($channel)/channels_generate(1)} # substitute actual channel $channel with the first 
+	
+		# If the channel corresponding output exists, we skip it
+		if [ -e "$outDir/probabilites.txt" ]
+		then
+			echo "Image $filename (fault $fn) already processed! Skipping..."
+			continue;
+		fi
+
+		printf "Running (fault: $fn, stim:$filename)..."
+
+		# Make dir if necessary (almost always)
+		if [ ! -d $outDir ]
+		then
+			printf "newDir($outDir) "
+			mkdir -p $outDir
+		fi
+
+		# Temporary name adjustment (1 simulated channel trick)
+		mv "$simDir/prov_WEIGHTS_$channel.DAT" "$simDir/WEIGHTS_1.DAT"
+
+		# Running simulation
+		res=$(vsim -c work.tb -do "$fault_cmd run 1 ms; q")
+		#echo "$res"
+		#exit 0
+		#res=$(vsim -c work.tb -do "$fault_cmd run 2.5 us; q")
+		echo $res | grep "Errors: 0" > /dev/null # check for errors
+		if [[ $? -ne 0 ]]
+		then
+			fn=report_errors
+			printf "-------------------New error: " >> $fn
+			date >> $fn
+			echo "" >> $fn
+			echo "$res" >> $fn
+			echo "$res"
+			echo "" >> $fn
+			exec $0 $a # restart
+			#exit 2
+		fi
+		unset res
+
+		# fix WEIGHTS names
+		mv "$simDir/WEIGHTS_1.DAT" "$simDir/prov_WEIGHTS_$channel.DAT"
+
+		# first layer propagation preparation
+		for i in {1..6}
+		do
+			cp ${goldDir}/ACTIVATED_$i $outDir/HW_SIM_ACTIVATED_$i.DAT # To propagate the probabilities
+		done
+		mv "${simDir}/HW_SIM_OUTPUT_1.DAT" "$outDir/HW_SIM_OUTPUT_$channel.DAT"
+	
+		# Activation and semi-report generation
+		printf "Report ("
+		diffs=0
+		i=$channel
+			sub "${goldDir}/OUTPUT_${i}" "${outDir}/HW_SIM_OUTPUT_${i}.DAT" > "${outDir}/differences_OUTPUT_$i.txt"
+			printf "%d " $?
+			activate "$outDir/HW_SIM_OUTPUT_$i.DAT" "$outDir/HW_SIM_ACTIVATED_$i.DAT"
+			sub "${goldDir}/ACTIVATED_${i}" "${outDir}/HW_SIM_ACTIVATED_${i}.DAT" > "${outDir}/differences_ACTIVATED_$i.txt"
+			printf "%d" $?
+		printf ")"
+		printf "round($a) - "
+		
+		# Network propagation
+		./data/n2d2_test ./data/dummy.pgm --first-layer-from-file $outDir --save-prob-vector "$outDir/probabilites.txt" > /dev/null 2>&1
+
+		# Compression of the results
+		compressActivated.py $outDir/HW_SIM_ACTIVATED*.DAT > /dev/null && rm $outDir/HW_SIM_ACTIVATED*.DAT # there's only one
+		compressOutput.py $outDir/HW_SIM_OUTPUT*.DAT > /dev/null && rm $outDir/HW_SIM_OUTPUT*.DAT # there are 6
+
+		zipDir=$(pwd)
+		cd $outDir
+		zip -m differences differences* > /dev/null
+		zip -m HW_SIM HW_SIM* > /dev/null
+		cd $zipDir
+
+		stopTime=$(date +%s%3N) # time stats
+
+		## Avg100 time statistics
+		let totalTime=stopTime-startTime
+		echo -n " time($totalTime)"
+		mv times times.old
+		tail -n99 times.old > times
+		echo $totalTime >> times
+		media=$(python3 -c "f=open('times'); c=[int(i) for i in f.read().split('\n')[:-1]]; f.close(); print('{0:.3}s'.format((sum(c)/len(c))/1000))")
+		echo " avg100($media) progress($perc)"
+		#exit 0
+	done
+
+# main cycle end
+let a=$a+1
+exec $0 $a
+
+

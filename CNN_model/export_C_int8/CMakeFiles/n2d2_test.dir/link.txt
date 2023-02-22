@@ -1,0 +1,1 @@
+/usr/bin/clang  -O0 -g -std=c99 -g -rdynamic CMakeFiles/n2d2_test.dir/n2d2_test.c.o -o bin/n2d2_test  libN2D2_export_C_Core.a -lm 

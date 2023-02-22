@@ -1,0 +1,129 @@
+#!/bin/sh
+
+fault_campaign_id=2
+
+if [[ -z ${1+c} ]]
+then
+	echo "Fault campaign selected is $fault_campaign_id"
+	echo "Do you confirm this is the correcto one? [y/N]"
+	read confirmation
+	if [ $confirmation != y ]
+	then
+		exit 1
+	fi
+	a=1
+else
+	a=$1
+fi
+
+basedir="data"
+simDir="${basedir}/HW_SIM_FILES"
+if [ $(ls $simDir/prov_WEIGHTS* | wc -l) -ne 6 ]
+then
+	echo -n "File $simDir/prov_WEIGHTS_1.DAT doesn't exist! Generating weights..." 
+	./${basedir}/n2d2_test $basedir/dummy.pgm  --only-first-layer --save-weights $simDir > /dev/null 2>&1
+
+	printf "moving WEIGHTS_x.DAT to prov_WEIGHTS_x.DAT... "
+	for i in {1..6}
+	do
+		
+		mv "$simDir/WEIGHTS_$i.DAT" "$simDir/prov_WEIGHTS_$i.DAT"
+	done
+
+	printf "OK. Starting the script...\n"
+fi
+
+output_name="HW_SIM_ACTIVATED_"
+
+stimuli=$(cat "./stimuli.list")
+
+totLen=$(( $(echo "$stimuli" | wc -l) + 1 )) 
+echo $totLen - $a
+if [[ $a -gt $totLen ]]
+then
+	echo "Finished!!!"
+	exit 0
+fi
+
+# Input files are iterated through exec command
+fault_file=$(echo $stimuli | head -n $a | tail -n 1)
+
+f=$(echo "$stimuli" | head -n $a | tail -n1)
+filename=$(basename "${f%.*}")
+
+goldDir="${basedir}/SEQUENCES_GOLD/$filename"
+if [ ! -e "$goldDir/HW_SIM_MAIN_SEQ.DAT" ]
+then
+	echo "File $filename/HW_SIM_MAIN_SEQ.DAT doesn't exist! Run n2d2_test first!"
+	continue;
+fi
+		# For each image we copy the input sequences
+		printf "Processing $filename. Copying files..."
+		cp ${goldDir}/HW_SIM_SEQ* $simDir
+		cp ${goldDir}/HW_SIM_MAIN_SEQ.DAT $simDir
+#for fault_file in faults/*
+#do
+	for fault_file in faults/*
+	do
+		fault_cmd=$(cat $fault_file) # fault command for modelsim
+		fn=$(echo $fault_file | cut -d'_' -f2) # Fault number
+		outDir="./FAULTY_$fault_campaign_id/$filename/$fn" 
+		
+		channel=$(echo $fault_cmd | cut -d'(' -f2 | cut -d')' -f1) # channel (between the 6) to be analysed
+		fault_cmd=${fault_cmd/channels_generate($channel)/channels_generate(1)}
+	
+		# If the channel corresponding output exists, we skip it
+		if [ -e "$outDir/${output_name}$channel.DAT" ]
+		then
+			echo "Image $filename (fault $fn) already processed! Skipping..."
+			continue;
+		fi
+
+		# Make dir if necessary (almost always)
+		if [ ! -d $outDir ]
+		then
+			printf "Dir $outDir doesn't exits. Creating it..."
+			mkdir -p $outDir
+			printf "Ok\n"
+		fi
+
+		# Temporary name adjustment
+		mv "$simDir/prov_WEIGHTS_$channel.DAT" "$simDir/WEIGHTS_1.DAT"
+
+		# Running simulation
+		printf "OK. Running hw sim (fault: $fn, stim:$filename)..."
+		mv strace_report strace_report.bak
+		strace vsim -c work.tb -do "$fault_cmd run 2.5 us; q" 2>strace_report 1>/dev/null
+		#echo $res | grep "Errors: 0" > /dev/null
+		#if [[ $? -ne 0 ]]
+		#then
+		#	echo "$res"
+		#	exit 2
+		#fi
+		unset res
+		printf "OK. "
+		
+		# Adjust names back
+		cp ${goldDir}/HW_SIM_ACTIVATED* $outDir # To propagate the probabilities
+		mv "$simDir/WEIGHTS_1.DAT" "$simDir/prov_WEIGHTS_$channel.DAT"
+		mv "${simDir}/HW_SIM_OUTPUT_1.DAT" "$outDir/HW_SIM_OUTPUT_$channel.DAT"
+
+		# Activation and Report generation
+		printf "Generating report... "
+		diffs=0
+		i=$channel
+			sub "${goldDir}/OUTPUT_${i}" "${outDir}/HW_SIM_OUTPUT_${i}.DAT" > "${outDir}/differences_OUTPUT_$i.txt"
+			printf "%d " $?
+			activate "$outDir/HW_SIM_OUTPUT_$i.DAT" "$outDir/HW_SIM_ACTIVATED_$i.DAT"
+			sub "${goldDir}/ACTIVATED_${i}" "${outDir}/HW_SIM_ACTIVATED_${i}.DAT" > "${outDir}/differences_ACTIVATED_$i.txt"
+			printf "%d " $?
+		mv transcript transcript.bak
+		printf "Done. $a\n"
+	done
+#done
+
+let a=$a+1
+
+exec $0 $a
+
+

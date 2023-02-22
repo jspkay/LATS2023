@@ -1,0 +1,4 @@
+/home/salvo/Documenti/Tesi/CNN_model/export_C_int8/CMakeFiles/N2D2_export_C_Core.dir
+/home/salvo/Documenti/Tesi/CNN_model/export_C_int8/CMakeFiles/n2d2_test.dir
+/home/salvo/Documenti/Tesi/CNN_model/export_C_int8/CMakeFiles/edit_cache.dir
+/home/salvo/Documenti/Tesi/CNN_model/export_C_int8/CMakeFiles/rebuild_cache.dir

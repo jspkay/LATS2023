@@ -1,0 +1,6 @@
+rm -r work
+
+vlog ./*.vh
+
+vsim -c work.full_adder_n_tb -do "vcd file report; vcd add -r /*; run; vcd flush; quit" -voptargs="+acc"
+

@@ -1,0 +1,140 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/salvo/Documenti/Tesi/hardware_models/j_shift_register
+T_opt
+!s110 1660314280
+VFV19d5?MJ^7U@V^z<GcdN1
+04 6 6 work jsr_tb jsr_tb 1
+=1-000ae431a4f1-62f662a8-166f4-1f63
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Pbitarrays
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 27
+w1659465329
+R1
+8package_bitArrays.vhd
+Fpackage_bitArrays.vhd
+l0
+L9 1
+VN1QHU:jPhQXi1HcnSDBOC2
+!s100 d@HVF5dZ<C;aVAKNGSP`k0
+Z5 OL;C;2021.2;73
+33
+Z6 !s110 1660314274
+!i10b 1
+Z7 !s108 1660314274.000000
+Z8 !s90 -2008|j_shift_register.vhd|j_shift_register_tb.vhd|package_bitArrays.vhd|
+Z9 !s107 package_bitArrays.vhd|j_shift_register_tb.vhd|j_shift_register.vhd|
+!i113 0
+Z10 o-2008
+Z11 tExplicit 1 CvgOpt 0
+Ej_shift_register
+Z12 w1660314046
+Z13 DPx6 thesis 9 bitarrays 0 22 CkDzTUz]FThT]IMIOiTI22
+R4
+R3
+R2
+!i122 27
+R1
+Z14 8j_shift_register.vhd
+Z15 Fj_shift_register.vhd
+l0
+L8 1
+V=<bQO<oiWe=loJ@MzK@A`1
+!s100 19Kj<BGa=QRFmKUlLSAgG1
+R5
+33
+R6
+!i10b 1
+R7
+R8
+R9
+!i113 0
+R10
+R11
+Aj_shift_register
+R13
+R4
+R3
+R2
+DEx4 work 16 j_shift_register 0 22 =<bQO<oiWe=loJ@MzK@A`1
+!i122 27
+l32
+L21 40
+V5l?9NNOb[TUI?hdMBHR6X1
+!s100 X3XZ24fGB0Q^GbC@OXelR1
+R5
+33
+R6
+!i10b 1
+R7
+R8
+R9
+!i113 0
+R10
+R11
+Ejsr_tb
+Z16 w1660314272
+R13
+R2
+R3
+R4
+!i122 27
+R1
+Z17 8j_shift_register_tb.vhd
+Z18 Fj_shift_register_tb.vhd
+l0
+L8 1
+VjHXCLO^^iM[]=FKTSGSAf0
+!s100 NnajA[[4iA<XOKRH6:g:S2
+R5
+33
+R6
+!i10b 1
+R7
+R8
+R9
+!i113 0
+R10
+R11
+Ajsr_tb
+R13
+R2
+R3
+R4
+DEx4 work 6 jsr_tb 0 22 jHXCLO^^iM[]=FKTSGSAf0
+!i122 27
+l27
+L11 39
+VhkW>4^SBQb6;VF=>C3laA3
+!s100 GL[IV2eD0bN:AhGQ``2Q93
+R5
+33
+R6
+!i10b 1
+R7
+R8
+R9
+!i113 0
+R10
+R11

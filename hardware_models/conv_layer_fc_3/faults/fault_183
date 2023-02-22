@@ -1,0 +1,1 @@
+force -freeze /tb/conv_layer/channels_generate(4)/systolicArray/c_mat(5,11) 1;

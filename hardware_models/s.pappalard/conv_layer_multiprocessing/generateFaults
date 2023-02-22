@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ ! -d faults ]
+then
+	echo "Directory faults dosn't exist. Making it"
+	mkdir faults
+fi
+
+i=0
+for channel in {1..6}
+do
+	for row in {1..6}
+	do
+		for col in {1..7}
+		do
+			for bit in {1..8}
+			do
+				for value in {0..1}
+				do
+	echo "forze -freze /tb/CL/channels_generate($channel)/C/systolicArray/c_mat($row, $col)($bit) $value;" > faults/fault_$i
+				let i=$i+1
+				done
+			done
+		done
+	done
+done

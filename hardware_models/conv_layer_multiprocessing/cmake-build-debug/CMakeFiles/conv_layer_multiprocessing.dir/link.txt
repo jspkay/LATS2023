@@ -1,0 +1,1 @@
+/usr/bin/clang -g CMakeFiles/conv_layer_multiprocessing.dir/main.c.o -o conv_layer_multiprocessing 

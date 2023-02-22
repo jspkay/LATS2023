@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/salvo/Documenti/Tesi/fault_generator/fangy.c
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+ctype.h
+-
+

@@ -1,0 +1,88 @@
+#!/bin/bash
+ficID=$(cat ficID)
+arrSize=(7 7)
+nZ=17
+
+names=(alpha bravo charlie delta echo foxtrot golf hotel india juliett kilo lima mike november oscar papa quebec romeo sierra tango uniform victor whiskey xray yankee zulu)
+
+faultID=$1
+stimulusID=$2
+envID=$3 # corresponds to the thread id
+
+simName=${names[$3]}
+#echo "Simulating $1 $2 on $simName"
+
+# Return values:
+# 0 - Simulation ok
+# 1 - Simulation already done, skipping
+# 2 - Gold copy doesn't exist. This is a problem
+# 3 - Vsim exited with more than 0 errors, just rerun the simulation
+
+
+basedir="data"
+workDir="work_$simName"
+simDir="$workDir/HW_SIM_FILES"
+
+## check for the weights to be in place, generate otherwise
+if [ $(ls $simDir/prov_WEIGHTS* | wc -l) -ne 6 ]
+then
+	echo "$envID - Generating weights... "
+	./${basedir}/n2d2_test ${basedir}/dummy.pgm --only-first-layer --save-weights $simDir > /dev/null 2>&1
+
+	for i in {1..6}
+	do
+		mv "$simDir/WEIGHTS_$i.DAT" "$simDir/prov_WEIGHTS_$i.DAT"
+	done
+fi
+
+# Read fault 
+fault_cmd=$(cat "faults/fault_$faultID")
+
+### Stimulus preparation
+filename=$(printf "env%04d" $stimulusID)
+goldDir="${basedir}/SEQUENCES_GOLD/$filename"
+if [ ! -e "$goldDir/HW_SIM_MAIN_SEQ.DAT" ]
+then
+	echo "File $filname/HW_SIM_SEQ.DAT doesn't exist! Run n2d2_test first!"
+	exit 2
+fi
+generateInputSequences.py "$basedir/stimuli/$filename.pgm" -o $simDir -r ${arrSize[0]} -c ${arrSize[1]} -z $nZ > /dev/null
+
+### Variables
+outDir="./FAULTY_$ficID/$filename/$faultID"
+channel=$(echo $fault_cmd | cut -d'(' -f2 | cut -d')' -f1)
+fault_cmd=${fault_cmd/channels_generate($channel)/channels_generate(1)} # channel substitution trick
+
+if [ -e "$outDir/probabilities.txt" ]
+then
+	echo "$envID - Image $filename (fault $faultID) already processed! Skipping..."
+	exit 1   
+fi
+
+echo "$envID - Simulating $1 $2... "
+if [ ! -d $outDir ]
+then
+	mkdir -p $outDir
+fi
+
+mv "$simDir/prov_WEIGHTS_$channel.DAT" "$simDir/WEIGHTS_1.DAT"
+
+# running
+res=$(vsim -c work_$simName.tb -do "$fault_cmd run 1 ms; q")
+echo $res | grep "Errors: 0" > /dev/null
+if [[ $? -ne 0 ]]
+then
+	if [[ "y" = $4 ]]
+	then
+		echo "res"
+	fi
+	echo "$envID - Couldn't run simulation!"
+	exit 3
+fi
+
+mv "$simDir/WEIGHTS_1.DAT" "$simDir/prov_WEIGHTS_$channel.DAT"
+
+mkdir -p queue/$faultID-$stimulusID
+mv "$simDir/HW_SIM_OUTPUT_1.DAT" "queue/$faultID-$stimulusID/HW_SIM_OUTPUT_$channel.DAT"
+
+exit 0

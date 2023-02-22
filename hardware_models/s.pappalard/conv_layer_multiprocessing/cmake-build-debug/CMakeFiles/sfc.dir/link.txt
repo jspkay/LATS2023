@@ -1,0 +1,1 @@
+/usr/bin/clang -g CMakeFiles/sfc.dir/start_fault_campaign.c.o -o sfc 

@@ -1,0 +1,86 @@
+#!/bin/python3
+
+import os
+import sys
+import math
+from pprint import pprint
+
+def find(path, name):
+    res = []
+    for el in os.scandir(path):
+        if el.is_dir():
+            res.extend(find(el, name))
+        elif el.name.find(name) >= 0:
+            res.append(el)
+    return res if res!=[] else []
+
+
+def aggregate(stats):
+    res = {}
+    if stats.get("total") != None:
+        tot = stats.pop("total")
+        for prop in stats.keys():
+           res[prop] = stats[prop] * 100 / tot
+        return res
+    else:
+        for el in stats.keys():
+            res[el] = aggregate(stats[el])
+    return res;
+
+
+if __name__ == "__main__":
+
+    if len(sys.argv) < 1:
+        print("""Error! No arguments given!
+                Usage: fault_statistics difference1 {difference_n}
+                differences_x identifies a file or directory to which find files with differences_NAME.txt names.""")
+
+    dirList = [];
+    for arg in sys.argv[1:]:
+        dirList.extend(find(arg, "differences") )
+
+    totalRounds = len(dirList)
+    roundN = 0
+    lastP = 0
+
+    statistics = {}
+    for el in dirList:
+
+        # Visual percentage
+        roundN = roundN+1
+        currentPerc = roundN * 100 / totalRounds
+        if math.trunc(currentPerc) > lastP+5: 
+            print( "%.2f%%" % currentPerc , end="\b"*10, flush=True)
+            lastP = currentPerc
+    
+        # Accuracy 
+        correct = False
+        f = open(el)
+        line = f.readline()
+        if line.find("=D") >= 0:
+            correct = True
+
+        name= el.name.split(".")[0].split("_");
+        i = 0
+        stats = statistics
+
+        # Statistics update
+        for i in range(1,len(name)):
+            # Count total cases
+            if i == len(name)-1:
+                if stats.get(name[i]) == None:
+                    stats[name[i]] = {"total": 1, "Correct": 1 if correct else 0}
+                else:
+                    stats = stats[name[i]]
+                    stats["total"] = stats["total"] + 1;
+                    if correct:
+                        stats["Correct"] = stats["Correct"] + 1;
+            else:
+                if stats.get(name[i]) == None:
+                    stats[name[i]] = {}
+                stats = stats[name[i]]
+
+    #pprint(statistics)
+    s = aggregate(statistics)
+
+    pprint(s)

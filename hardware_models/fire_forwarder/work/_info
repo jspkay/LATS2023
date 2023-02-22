@@ -1,0 +1,284 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/salvo/Documenti/Tesi/hardware_models/fire_forwarder
+T_opt
+!s110 1659778045
+V4OmE48Cjgo]IDMI=[b=7D2
+04 4 4 work fftb fftb 1
+=1-000ae431a4f1-62ee33fd-3db99-2828
+Z2 !s124 OEM10U67 
+Z3 o-quiet -auto_acc_if_foreign -work work +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.2;73
+R1
+T_opt1
+!s110 1659966782
+VPBU7O2M;k@dS=VJBH9``P3
+04 2 2 work tb tb 1
+=1-000ae431a4f1-62f1153e-c069-20c0
+R2
+R3
+R4
+n@_opt1
+R5
+R1
+Edelay_block
+Z6 w1659966931
+Z7 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 128
+R1
+Z10 8../selective_shift_register/selective_shift_register.vhd
+Z11 F../selective_shift_register/selective_shift_register.vhd
+l0
+L5 1
+V41[H6`LQSTPWU27=7c77E0
+!s100 `@BL<;;82_`E<Sf`G5K=52
+Z12 OL;C;2021.2;73
+33
+Z13 !s110 1659966931
+!i10b 1
+Z14 !s108 1659966931.000000
+Z15 !s90 -2008|-lint|-2008|../selective_shift_register/selective_shift_register.vhd|
+Z16 !s107 ../selective_shift_register/selective_shift_register.vhd|
+!i113 0
+Z17 o-2008 -lint -2008
+Z18 tExplicit 1 CvgOpt 0
+Adb
+R7
+R8
+R9
+DEx4 work 11 delay_block 0 22 41[H6`LQSTPWU27=7c77E0
+!i122 128
+l11
+Z19 L10 9
+VV]m_i;[l5kO?cXCfBHDX03
+!s100 VzfnKa@;CH@SIoF;e_aK43
+R12
+33
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 0
+R17
+R18
+Eff_block
+Z20 w1659977232
+R8
+R9
+!i122 130
+R1
+Z21 8fire_forwarder.vhd
+Z22 Ffire_forwarder.vhd
+l0
+L4 1
+V^ldhN@Jho>ZC>G6[NnRRR0
+!s100 RVVGM@lDdWj^3nnjD6m_S3
+R12
+33
+Z23 !s110 1659977232
+!i10b 1
+Z24 !s108 1659977232.000000
+Z25 !s90 -2008|-lint|-2008|fire_forwarder.vhd|
+Z26 !s107 fire_forwarder.vhd|
+!i113 0
+R17
+R18
+Aff
+R8
+R9
+Z27 DEx4 work 8 ff_block 0 22 ^ldhN@Jho>ZC>G6[NnRRR0
+!i122 130
+l13
+L11 26
+VR0EA6_jCE91m<;B93V>zh2
+!s100 kdoeW600ej?^?5aQ_beCI3
+R12
+33
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 0
+R17
+R18
+Efftb
+Z28 w1659778040
+R8
+R9
+!i122 94
+R1
+Z29 8ff_tb.vhd
+Z30 Fff_tb.vhd
+l0
+L4 1
+V]C2Hd4`6W@`NVT;aNTOH<1
+!s100 6fIm:?B6Pagoa8iJ9UlHI1
+R12
+33
+Z31 !s110 1659780101
+!i10b 1
+Z32 !s108 1659780100.000000
+Z33 !s90 -2008|ff_tb.vhd|fire_forwarder.vhd|
+Z34 !s107 fire_forwarder.vhd|ff_tb.vhd|
+!i113 0
+Z35 o-2008
+R18
+Afftb
+R8
+R9
+DEx4 work 4 fftb 0 22 ]C2Hd4`6W@`NVT;aNTOH<1
+!i122 94
+l24
+L6 42
+V>;74hzfQFojXE4JA@A@`m0
+!s100 b1bkla7TB1F5cT=FKIFKM1
+R12
+33
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 0
+R35
+R18
+Efire_forwarder
+R20
+R8
+R9
+!i122 130
+R1
+R21
+R22
+l0
+L40 1
+VAehPW5M5fDf13oB6[c:[a2
+!s100 hoVmSnGX1kDTZVn:gzi1z3
+R12
+33
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 0
+R17
+R18
+Afire_forwarder
+R8
+R9
+DEx4 work 14 fire_forwarder 0 22 AehPW5M5fDf13oB6[c:[a2
+!i122 130
+l57
+L50 14
+V^WnY]b;C]?2<V7^0Z[8JY3
+!s100 fX9m<:l4HBZNocL9Z6RSQ3
+R12
+33
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 0
+R17
+R18
+Aff
+R8
+R9
+DEx4 work 14 fire_forwarder 0 22 _Pge^P5GLD=L7L8U=iB`<2
+!i122 21
+l11
+R19
+VT;RUah2iT@[Cd4C65d7SZ2
+!s100 ZLa2TJ3H9enmDl^^6NaaY3
+R12
+33
+!s110 1659623225
+!i10b 1
+!s108 1659623225.000000
+R33
+R34
+!i113 0
+R35
+R18
+w1659623218
+Etb
+Z36 w1659966772
+R8
+R9
+!i122 126
+R1
+R29
+R30
+l0
+L4 1
+V:42A_kSg5NZS4X7?`GiXn1
+!s100 7fE>J3hF>;fPZJkGYGekJ0
+R12
+33
+Z37 !s110 1659966777
+!i10b 1
+Z38 !s108 1659966777.000000
+R33
+R34
+!i113 0
+R35
+R18
+Atb
+R8
+R9
+DEx4 work 2 tb 0 22 :42A_kSg5NZS4X7?`GiXn1
+!i122 126
+l25
+L6 50
+Vi8nczSjjEoVzfld1[jBG30
+!s100 ;8a=F8W5Xa5ge8;EYhnKG2
+R12
+33
+R37
+!i10b 1
+R38
+R33
+R34
+!i113 0
+R35
+R18

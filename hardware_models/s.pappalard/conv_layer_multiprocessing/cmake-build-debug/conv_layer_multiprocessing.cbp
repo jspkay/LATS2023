@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="conv_layer_multiprocessing"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sfc">
+				<Option output="/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/sfc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/lib64/clang/15.0.4/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 sfc"/>
+					<CompileFile command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sfc/fast">
+				<Option output="/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/sfc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/lib64/clang/15.0.4/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 sfc/fast"/>
+					<CompileFile command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/start_fault_campaign.c">
+			<Option target="sfc"/>
+		</Unit>
+		<Unit filename="/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

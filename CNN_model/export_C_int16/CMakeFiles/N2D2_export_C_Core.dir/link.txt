@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar qc libN2D2_export_C_Core.a CMakeFiles/N2D2_export_C_Core.dir/src/getline.c.o CMakeFiles/N2D2_export_C_Core.dir/src/n2d2.c.o CMakeFiles/N2D2_export_C_Core.dir/src/network.c.o
+/usr/bin/llvm-ranlib libN2D2_export_C_Core.a

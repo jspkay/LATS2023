@@ -1,0 +1,144 @@
+m255
+K4
+z2
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing_fic_4
+Echannel
+Z0 w1670861743
+Z1 DPx6 thesis 13 filefunctions 0 22 EZ3G@5_S[VO;ih<l:HP>Z2
+Z2 DPx6 thesis 9 bitarrays 0 22 9lYo65mkGKABNjVjWi8513
+Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 20
+Z6 d/home/salvo/Documenti/Tesi/hardware_models/conv_layer_multiprocessing_fic_5
+Z7 8./conv_layer_reduced.vhd
+Z8 F./conv_layer_reduced.vhd
+l0
+L216 1
+VKUok[V=hDk]?KA5;7P`:G2
+!s100 `CHdI5K>5d4KloZ0Z=;e^3
+Z9 OL;C;2021.2;73
+33
+Z10 !s110 1670862399
+!i10b 1
+Z11 !s108 1670862399.000000
+Z12 !s90 -2008|./conv_layer_reduced_tb.vhd|./conv_layer_reduced.vhd|
+Z13 !s107 ./conv_layer_reduced.vhd|./conv_layer_reduced_tb.vhd|
+!i113 0
+Z14 o-2008
+Z15 tExplicit 1 CvgOpt 0
+Achannel
+R1
+R2
+R3
+R4
+R5
+Z16 DEx4 work 7 channel 0 22 KUok[V=hDk]?KA5;7P`:G2
+!i122 20
+l282
+Z17 L234 86
+Z18 Ve^zi6B7>JT[MFkQYm^Hgi3
+Z19 !s100 =82RL<2j:l69e_62b93z>1
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Econv_layer_reduced
+R0
+R1
+R2
+R3
+R4
+R5
+Z20 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+!i122 20
+R6
+R7
+R8
+l0
+L17 1
+VD?=7A;c<QDDLfok2:=XZ=2
+!s100 m0@>5D82H[LIL9WLF?Xik0
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Aconv_layer_reduced
+R1
+R2
+R3
+R4
+R5
+R20
+Z21 DEx4 work 18 conv_layer_reduced 0 22 D?=7A;c<QDDLfok2:=XZ=2
+!i122 20
+l114
+Z22 L29 177
+Z23 V9ANTYRM1<9i_oLF5][`E[1
+Z24 !s100 R0bLIaonH543<9P]4dd@61
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Etb
+Z25 w1670862176
+!i122 20
+R6
+Z26 8./conv_layer_reduced_tb.vhd
+Z27 F./conv_layer_reduced_tb.vhd
+l0
+L1 1
+VbZiIcWHeda4=M09bYG92d2
+!s100 :G8;_];>?E4fPiKV8=k@m0
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Atb
+Z28 DEx4 work 2 tb 0 22 bZiIcWHeda4=M09bYG92d2
+!i122 20
+l31
+Z29 L2 38
+Z30 VC0ooclmWZJ;8B3]TIWbYA2
+Z31 !s100 F9NQYXAfBWT8B;>WzO[kB3
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15

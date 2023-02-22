@@ -1,0 +1,207 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/salvo/Documenti/Tesi/hardware_models/rom
+T_opt
+!s110 1660042049
+V:7gWR8FjDbh?e7l7LRSC?0
+Z2 04 2 2 work tb tb 1
+=1-000ae431a4f1-62f23b41-45a60-2e00
+Z3 !s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.2;73
+T_opt1
+!s110 1659793964
+V@?@d0AN2i9^WKZV3SJI550
+R2
+=1-000ae431a4f1-62ee722c-6031b-75d3
+R3
+o-quiet -auto_acc_if_foreign -work work
+R4
+n@_opt1
+R5
+R1
+Pfilefunctions
+Z6 DPx6 thesis 9 bitarrays 0 22 1D3ZKHc42zWml[_==NF]?3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z9 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+!i122 266
+Z10 w1660039755
+R1
+Z11 8/home/salvo/Documenti/Tesi/hardware_models/thesis_lib/package_fileFunctions.vhd
+Z12 F/home/salvo/Documenti/Tesi/hardware_models/thesis_lib/package_fileFunctions.vhd
+l0
+L10 1
+V83jIUJLPbUU[j<=Q=_[f01
+!s100 kZJ4;fCgKcQzD7do:g:PX3
+Z13 OL;C;2021.2;73
+33
+b1
+Z14 !s110 1660039755
+!i10b 1
+Z15 !s108 1660039755.000000
+Z16 !s90 -2008|-lint|-2008|/home/salvo/Documenti/Tesi/hardware_models/thesis_lib/package_fileFunctions.vhd|
+Z17 !s107 /home/salvo/Documenti/Tesi/hardware_models/thesis_lib/package_fileFunctions.vhd|
+!i113 0
+Z18 o-2008 -lint -2008
+Z19 tExplicit 1 CvgOpt 0
+Bbody
+DPx4 work 13 filefunctions 0 22 83jIUJLPbUU[j<=Q=_[f01
+R6
+R7
+R8
+R9
+!i122 266
+l0
+L26 1
+VYT9Q2B@h_Nd904N7giJg?3
+!s100 jmWE5m`5AmfD;?hGePzN?0
+R13
+33
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 0
+R18
+R19
+Erom
+Z20 w1660039821
+Z21 DPx6 thesis 13 filefunctions 0 22 2YO?;?1g=Wc9Z?lOgQI061
+R6
+R8
+R7
+R9
+!i122 274
+R1
+Z22 8rom.vhd
+Z23 From.vhd
+l0
+L11 1
+Vz[F3V2gCH^KDI>]fXE^z11
+!s100 L;An^UVbL1B@iX1o5@<MH0
+R13
+33
+Z24 !s110 1660042043
+!i10b 1
+Z25 !s108 1660042043.000000
+Z26 !s90 -2008|rom.vhd|rom_tb.vhd|
+Z27 !s107 rom_tb.vhd|rom.vhd|
+!i113 0
+Z28 o-2008
+R19
+Arom
+R21
+R6
+R8
+R7
+R9
+DEx4 work 3 rom 0 22 z[F3V2gCH^KDI>]fXE^z11
+!i122 274
+l71
+L20 56
+V_ABj`O74DgjY7R;S0`eOL0
+!s100 BI<SWo:?WF]o54KT<aE>l2
+R13
+33
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R28
+R19
+Etb
+Z29 w1659795280
+Z30 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+R8
+R9
+R7
+!i122 274
+R1
+Z31 8rom_tb.vhd
+Z32 From_tb.vhd
+l0
+L6 1
+V4eR31dSD2_2S]6l?6XB9l1
+!s100 PSaM2zSdiBNZm9Ieh9gZj0
+R13
+33
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R28
+R19
+Atb
+R30
+R8
+R9
+R7
+DEx4 work 2 tb 0 22 4eR31dSD2_2S]6l?6XB9l1
+!i122 274
+l22
+L8 27
+VgcJRI0TKZnAZ4[^ZY>4`_3
+!s100 S6lY6hOiBoSX=NXlRGH:@1
+R13
+33
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R28
+R19

@@ -1,0 +1,19 @@
+# Cmake
+## Needed 
+To build with cmake it is necessary to have clang and libopm (openMP library)
+Then the CMakeList.txt file has to be modified as follows:
+	1. add `SET(CMAKE_REQUIRED_FLAGS "-fno-builtin")` after the line `PROJECT(N2D2_export_C)`
+	2. add `TARGET_LINK_LIBRARIES(${bin} m)` after `TARGET_LINK_LIBRARIES(${bin} N2D2_export_C_Core)`
+
+## Building
+execute the following commands
+```
+$ cmake CMakeLists.txt -DCMAKE_C_COMPILER=/path/to/clang
+$ cmake --build . --target n2d2_test -j 6
+
+# clang
+Just execute the command
+
+```$ clang n2d2_test.c src/*.c -Iinclude -lm -std=c99 -g```
+
+This last command can be used fro the debugging

@@ -1,0 +1,1 @@
+This folder contains three simple programs useful for the fault campaings. To build them, shuold be enough to execute `gcc program.c -o program`

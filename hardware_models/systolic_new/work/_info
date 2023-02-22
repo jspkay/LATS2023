@@ -1,0 +1,200 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/salvo/Documenti/Tesi/hardware_models/systolic_new
+T_opt
+!s110 1659285573
+Vbk@VY`F[b3``@g01R0@;D0
+04 12 12 work readfromfile readfromfile 1
+=1-000ae431a4f1-62e6b045-6c64b-b72c
+!s124 OEM10U1 
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+R1
+Emultiplicator
+Z2 w1658693246
+Z3 DPx4 work 8 my_types 0 22 X=Qfd5bPa0JmY`9Udo0ih1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z6 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+!i122 1
+R1
+Z7 8systolic_generic.vhd
+Z8 Fsystolic_generic.vhd
+l0
+L18 1
+VH[ZA^a8`hThbXcJ6zgE=53
+!s100 UFkRcYGgo^?lY:6`nlh@53
+Z9 OL;C;2021.2;73
+32
+Z10 !s110 1658830422
+!i10b 1
+Z11 !s108 1658830422.000000
+Z12 !s90 systolic_generic.vhd|
+Z13 !s107 systolic_generic.vhd|
+!i113 0
+Z14 tExplicit 1 CvgOpt 0
+Abehavior
+R3
+R4
+R5
+R6
+DEx4 work 13 multiplicator 0 22 H[ZA^a8`hThbXcJ6zgE=53
+!i122 1
+l46
+L30 76
+Vf`nVPWLK`MUzPLY8Nz?0=2
+!s100 nj?IYzT06HZ=FRoBjZWZG2
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Pmy_types
+R6
+R4
+R5
+!i122 1
+R2
+R1
+R7
+R8
+l0
+L5 1
+VX=Qfd5bPa0JmY`9Udo0ih1
+!s100 aF80PFIlnWK@T1<N`im1C3
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Ep
+Z15 w1657578366
+R6
+R4
+R5
+!i122 0
+R1
+Z16 8basic_element.vhd
+Z17 Fbasic_element.vhd
+l0
+L5 1
+VmV3jG?RPEL9=FTeZWX7TB3
+!s100 7VUCc3NK3N3R5YWjZ2dLU1
+R9
+32
+R10
+!i10b 1
+R11
+Z18 !s90 basic_element.vhd|
+Z19 !s107 basic_element.vhd|
+!i113 0
+R14
+Abehave
+R6
+R4
+R5
+DEx4 work 1 p 0 22 mV3jG?RPEL9=FTeZWX7TB3
+!i122 0
+l16
+L14 25
+VPN`Uo1@OZ>NZ2Tg0<AU][1
+!s100 ZzOD;>gc^go44Il^zJ7@:3
+R9
+32
+R10
+!i10b 1
+R11
+R18
+R19
+!i113 0
+R14
+Ereadfromfile
+Z20 w1659285705
+R4
+R5
+!i122 34
+R1
+Z21 8file_read.vhd
+Z22 Ffile_read.vhd
+l0
+L5 1
+VAI^jLe?e_iZ7R_5_ajYHI3
+!s100 YX759FnCBQdiBR8Nj6Q;h0
+R9
+33
+!s110 1659285758
+!i10b 1
+!s108 1659285758.000000
+!s90 -2008|file_read.vhd|
+Z23 !s107 file_read.vhd|
+!i113 0
+o-2008
+R14
+Areadfromfile
+R4
+R5
+DEx4 work 12 readfromfile 0 22 MP8Sjh=F8XIkI>L^bCeO=2
+!i122 32
+l16
+L8 42
+VR7I@`H??^?P6Wn;1>T>[:1
+!s100 BY:Q;4IBzSk@>^3G8QL:83
+R9
+32
+!s110 1659285566
+!i10b 1
+!s108 1659285566.000000
+!s90 file_read.vhd|
+R23
+!i113 0
+R14
+Esystolic_tb
+w1658830421
+R3
+R6
+R4
+R5
+!i122 2
+R1
+8systolic_generic_tb.vhd
+Fsystolic_generic_tb.vhd
+l0
+L6 1
+V3CP;zV2K3W4HRW`nIzJ]d1
+!s100 ]NckY4NXkT:jSS_0Og_E51
+R9
+32
+R10
+!i10b 1
+R11
+!s90 systolic_generic_tb.vhd|
+!s107 systolic_generic_tb.vhd|
+!i113 0
+R14

@@ -1,0 +1,110 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/salvo/Documenti/Tesi/hardware_models/muxer
+T_opt
+!s110 1661864934
+V=SKj`6FmIld0aa>h@aB:b0
+04 2 2 work tb tb 1
+=1-000ae431a4f1-630e0be6-7daae-293b
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Emuxer
+Z2 w1661864862
+Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 20
+R1
+Z6 8muxer.vhd
+Z7 Fmuxer.vhd
+l0
+L5 1
+V=n2FElmgcdecdIgaYPM_61
+!s100 J11PLU<okgO;c923BoVSU3
+Z8 OL;C;2021.2;73
+33
+Z9 !s110 1661864931
+!i10b 1
+Z10 !s108 1661864931.000000
+Z11 !s90 -2008|muxer.vhd|muxer_tb.vhd|
+Z12 !s107 muxer_tb.vhd|muxer.vhd|
+!i113 0
+Z13 o-2008
+Z14 tExplicit 1 CvgOpt 0
+Amuxer
+R3
+R4
+R5
+DEx4 work 5 muxer 0 22 =n2FElmgcdecdIgaYPM_61
+!i122 20
+l13
+L12 6
+VzQj_XTCJN2UeUR1mJjkV`3
+!s100 9Mg>Z<SKJ5K<z`1MMbH5V0
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Etb
+Z15 w1661864929
+R3
+R4
+R5
+!i122 20
+R1
+Z16 8muxer_tb.vhd
+Z17 Fmuxer_tb.vhd
+l0
+L5 1
+VB3??`7e3IdQDEa2TAC@_42
+!s100 iGgVMLBjAkKfVY1BD`2lM3
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Atb
+R3
+R4
+R5
+DEx4 work 2 tb 0 22 B3??`7e3IdQDEa2TAC@_42
+!i122 20
+l21
+L7 25
+V@jMahC;_LgaSoHBf1zMjM1
+!s100 =UMaXbE`mKd16E2TE?j^02
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14

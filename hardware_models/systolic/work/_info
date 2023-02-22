@@ -1,0 +1,175 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/s.pappalardo/first/systolic
+T_opt
+!s110 1652800221
+V2dkgjo5a;NNokcDCdED:>2
+04 11 9 work systolic_tb behaviour 1
+=1-44a8422d4cb0-6283badd-37810-63cf
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;10.5c_4;63
+Ebasic_tb
+Z1 w1651159620
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8basic_element_tb.vhd
+Z6 Fbasic_element_tb.vhd
+l0
+L5
+Vl6Y:k1jFEQ3XD2Z[4_l3Z2
+!s100 :4R>BeFAoVQzedVIBOJS71
+Z7 OL;C;10.5c_4;63
+32
+Z8 !s110 1651171519
+!i10b 1
+Z9 !s108 1651171519.000000
+Z10 !s90 basic_element_tb.vhd|
+Z11 !s107 basic_element_tb.vhd|
+!i113 0
+Z12 tExplicit 1 CvgOpt 0
+Abehave
+R2
+R3
+R4
+DEx4 work 8 basic_tb 0 22 l6Y:k1jFEQ3XD2Z[4_l3Z2
+l26
+L8
+VzT:Kg9M8;:km?TSFLD^OX2
+!s100 Y4@J>BY^NGPXnmMN^7E@^1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+Emultiplicator
+Z13 w1651175588
+R2
+R3
+R4
+R0
+Z14 8systolic_array.vhd
+Z15 Fsystolic_array.vhd
+l0
+L5
+V;A]RH0T=QXb_44>GLOdiA2
+!s100 9:b_2o``?7VCzRf<QfNGN1
+R7
+32
+Z16 !s110 1652264835
+!i10b 1
+Z17 !s108 1652264835.000000
+Z18 !s90 systolic_array.vhd|
+Z19 !s107 systolic_array.vhd|
+!i113 0
+R12
+Abehavior
+R2
+R3
+R4
+DEx4 work 13 multiplicator 0 22 ;A]RH0T=QXb_44>GLOdiA2
+l41
+L19
+VQo@><F=>ND7z@loNzJfFk2
+!s100 ?U;@?79ii2EZ?M4UzNea;2
+R7
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 0
+R12
+Ep
+Z20 w1652797666
+R2
+R3
+R4
+R0
+Z21 8basic_element.vhd
+Z22 Fbasic_element.vhd
+l0
+L5
+VzDG_ehaa0W9:E8=ESW4Ak1
+!s100 fb^hk_EPbZQ]Pf@D[QCAm2
+R7
+32
+Z23 !s110 1652797674
+!i10b 1
+Z24 !s108 1652797674.000000
+Z25 !s90 basic_element.vhd|
+Z26 !s107 basic_element.vhd|
+!i113 0
+R12
+Abehave
+R2
+R3
+R4
+DEx4 work 1 p 0 22 zDG_ehaa0W9:E8=ESW4Ak1
+l18
+L16
+VlX0QSB^d89SXjA[bf3Mm=1
+!s100 2JbCI0]E`;kH7Pe[14ZAh0
+R7
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 0
+R12
+Esystolic_tb
+Z27 w1651176573
+R2
+R3
+R4
+R0
+Z28 8systolic_tb.vhd
+Z29 Fsystolic_tb.vhd
+l0
+L5
+Vol5aeBk3k4jUdY@GM[aRV2
+!s100 YoO6lklH0bHOz8U0_3`M21
+R7
+32
+R16
+!i10b 1
+R17
+Z30 !s90 systolic_tb.vhd|
+Z31 !s107 systolic_tb.vhd|
+!i113 0
+R12
+Abehaviour
+R2
+R3
+R4
+DEx4 work 11 systolic_tb 0 22 ol5aeBk3k4jUdY@GM[aRV2
+l43
+L8
+V7miS3m3Ro;4gOS58F5:b?1
+!s100 B=R0Ie]BmM2@6_K2L_R5`2
+R7
+32
+R16
+!i10b 1
+R17
+R30
+R31
+!i113 0
+R12

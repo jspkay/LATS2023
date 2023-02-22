@@ -1,0 +1,10 @@
+# vsim -c work_alpha.tb 
+# Start time: 14:17:30 on Dec 20,2022
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# ** License Issue: License server does not support this feature (intelqsimstarter)
+# ** License Issue: Invalid host. (/home/salvo/.local/intelFPGA/21.1/license/LR-087585_License.dat)
+# ** Error: Failure to obtain a VHDL simulation license. Unable to checkout 'intelqsimstarter' license.
+# Error loading design
+# End time: 14:17:30 on Dec 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

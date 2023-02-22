@@ -1,0 +1,78 @@
+#!/bin/sh
+
+fault_campaign_id=3
+
+echo "Fault campaign selected is $fault_campaign_id"
+echo "Do you confirm this is the correcto one? [y/N]"
+read confirmation
+if [ $confirmation != y ]
+then
+	exit 1
+fi
+
+basedir="data"
+simDir="${basedir}/HW_SIM_FILES"
+if [ ! -e "$simDir/WEIGHTS_1.DAT" ]
+then
+	echo -n "File $basedir/HW_SIM_FILES/WEIGHTS_1.DAT doesn't exist! Generating weights..." 
+	./${basedir}/n2d2_test $basedir/dummy.pgm  --only-first-layer --save-weights $simDir > /dev/null 2>&1
+	printf "OK. Starting the script...\n"
+fi
+
+stimuli=$(cat "${basedir}/stimuli.list")
+fault_dir="faults"
+
+for fault_file in $fault_dir/*
+do
+	fault_cmd=$(cat $fault_file)
+	fn=$(echo $fault_file | cut -d'_' -f2)
+	for f in $stimuli
+	do
+		filename=$(basename "${f%.*}")
+		outDir="./FAULTY_$fault_campaign_id/$filename/$fn"
+		goldDir="${basedir}/SEQUENCES_GOLD/$filename"
+		if [ ! -e "$goldDir/HW_SIM_MAIN_SEQ.DAT" ]
+		then
+			echo "File $filename/HW_SIM_MAIN_SEQ.DAT doesn't exist! Run n2d2_test first!"
+			continue;
+		fi
+
+		if [ -e "$outDir/HW_SIM_OUTPUT_1.DAT" ]
+		then
+			echo "Image $filename already processed! Skipping..."
+			continue;
+		fi
+
+		if [ ! -d $outDir ]
+		then
+			printf "Dir $outDir doesn't exits. Creating it..."
+			mkdir -p $outDir
+			printf "Ok\n"
+		fi
+
+		printf "Processing $filename. Copying files..."
+		cp ${goldDir}/HW_SIM_SEQ* $simDir
+		cp ${goldDir}/HW_SIM_MAIN_SEQ.DAT $simDir
+		printf "OK. Running hw sim (fault: $fn, stim:$filename)..."
+		res=$(vsim -c work.tb -voptargs="+acc -novopt" -suppress 14408 -do "$fault_cmd run 2.5 us; q")
+		echo $res | grep "Errors: 0" > /dev/null
+		if [[ $? -ne 0 ]]
+		then
+			echo "$res"
+			exit 2
+		fi
+		printf "OK. "
+		mv ${simDir}/HW_SIM* $outDir
+		printf "Generating report... "
+		diffs=0
+		for i in {1..6} # number of channels of the first layer
+		do
+			sub "${goldDir}/OUTPUT_${i}" "${outDir}/HW_SIM_OUTPUT_${i}.DAT" > "${outDir}/differences_OUTPUT_$i.txt"
+			printf "%d " $?
+			sub "${goldDir}/ACTIVATED_${i}" "${outDir}/HW_SIM_ACTIVATED_${i}.DAT" > "${outDir}/differences_ACTIVATED_$i.txt"
+			printf "%d " $?
+		done
+		printf "Done.\n"
+	done
+done
+
