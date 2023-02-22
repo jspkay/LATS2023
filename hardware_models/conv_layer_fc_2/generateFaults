@@ -14,8 +14,6 @@ NOTE: This means that an element of the first row can never be affected by any f
 d="../conv_layer_fc_1/faults/"
 newDir = "./faults/"
 
-random.seed(1)
-
 for file in os.listdir(d):
     f = open(d+file)
     line = f.readline()

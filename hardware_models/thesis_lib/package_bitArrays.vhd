@@ -10,7 +10,6 @@ package bitArrays is
 	constant byte : positive := 8;
 	constant half : positive := 16;
 	constant word : positive := 32;
-	constant double : positive := 64;
 
 	type std_logic_arr_t is array(natural range <>) of std_logic_vector;
 	type std_logic_mat_t is array(natural range <>, natural range <>) of std_logic_vector;

@@ -6,8 +6,8 @@ CMakeFiles/N2D2_export_C_Core.dir/src/getline.c.o: \
   /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
   /usr/include/stdc-predef.h /usr/include/sys/cdefs.h \
   /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
-  /usr/include/gnu/stubs-64.h /usr/lib64/clang/15.0.4/include/stddef.h \
-  /usr/lib64/clang/15.0.4/include/stdarg.h /usr/include/bits/types.h \
+  /usr/include/gnu/stubs-64.h /usr/lib64/clang/14.0.0/include/stddef.h \
+  /usr/lib64/clang/14.0.0/include/stdarg.h /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
   /usr/include/bits/types/__fpos_t.h \
   /usr/include/bits/types/__mbstate_t.h \

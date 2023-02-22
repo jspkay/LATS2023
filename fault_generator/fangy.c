@@ -29,8 +29,6 @@
 
 void process_file(FILE *fin, FILE *fout);
 
-unsigned int rng_seed; // For reapeating random generations on different machines.
-
 int main(int argc, char **argv) {
     if (argc < 2) {
         printf("Errors in parameters!\n");
@@ -43,7 +41,7 @@ int main(int argc, char **argv) {
     char *out_filename = default_fn;
     int std_output = 0;
 
-    rng_seed = time(0);
+    int rng_seed = time(0);
     int fileFound = 0;
     for (int i = 1; i < argc; i++) {
         if (argv[i][0] != '-' || argv[i][1] != '-') {
@@ -157,7 +155,7 @@ int generateRandom(FILE *fin, int current_line){
         error(tmp_str);
     }
     int dist = rng_rv - rng_lv + 1;
-    rng_value = rand_r(&rng_seed) % dist + rng_lv;
+    rng_value = rand() % dist + rng_lv;
     return rng_value;
 }
 

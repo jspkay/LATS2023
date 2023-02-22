@@ -16,6 +16,8 @@ begin
 	begin
 		if rising_edge(clk) then
 			value <= value + to_unsigned(1, value'length);
+
+
 			if rst = '1' then
 				value <= to_unsigned(initial_value, value'length) after 0 ns;
 			end if;

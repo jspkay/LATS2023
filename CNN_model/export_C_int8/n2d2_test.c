@@ -46,20 +46,17 @@ char usage[] = "Usage: n2d2_test filename [options...]\n"
 "\t --first-layer-from-file dir \t read the output of the first layer from dir\n"
 "\t --save-first-layer-output dir \t save the first layer output to dir\n"
 "\t --save-first-layer-input dir \t\t save the first layer input for hw acceleration in the dir directory\n"
-"\t --save-weights dir \t\t save the weights' sequences to dir\n"
-"\t --save-prob-vector fn \t\t save the output probability of the classification in the file fn";
+"\t --save-weights dir \t\t save the weights' sequences to dir\n";
 
 int OPT_ONLY_FIRST_LAYER = 0,
 	OPT_FIRST_LAYER_FROM_FILE = 0,
 	OPT_SAVE_FIRST_LAYER_OUTPUT = 0,
 	OPT_SAVE_FIRST_LAYER_INPUT = 0,
-    OPT_SAVE_WEIGHTS = 0,
-    OPT_SAVE_PROB_VEC = 0;
+    OPT_SAVE_WEIGHTS = 0;
 char *OPT_SFLO_DIR = NULL,
-	*OPT_FLFF_DIR = NULL,
+	*OPT_FLFF_FILENAME = NULL,
 	*OPT_SFLI_DIR = NULL,
-    *OPT_SW_DIR = NULL,
-    *OPT_SPV_FILENAME=NULL;
+    *OPT_SW_DIR = NULL;
 
 static const size_t CONFUSION_MATRIX_PRINT_MAX_TARGETS = 16;
 
@@ -113,14 +110,11 @@ int main(int argc, char* argv[])
 				OPT_ONLY_FIRST_LAYER = 1;
 			}
 			else if( strcmp(argv[i]+2, "embed-hw-sim") == 0){ // start the program, wait for hardware simulation to complete and then 
-								     // continue the neural network with the hw input
-                fprintf(stderr, "Not implemented yet!");
-                exit(0);
+								     // continue the neural network with the hw inputs
 				
 			}
 			else if( strcmp(argv[i]+2, "first-layer-from-file") == 0){ // read the output of the first layer from file
 				OPT_FIRST_LAYER_FROM_FILE = 1;
-                OPT_FLFF_DIR = argv[++i];
 			}
 			else if( strcmp(argv[i]+2, "save-first-layer-output") == 0){ // save the output of the first layer to a file
 				OPT_SAVE_FIRST_LAYER_OUTPUT = 1;
@@ -133,10 +127,6 @@ int main(int argc, char* argv[])
             else if( strcmp(argv[i]+2, "save-weights") == 0){
                 OPT_SAVE_WEIGHTS = 1;
                 OPT_SW_DIR = argv[++i];
-            }
-            else if(strcmp(argv[i]+2, "save-prob-vector") == 0){
-                OPT_SAVE_PROB_VEC = 1;
-                OPT_SPV_FILENAME = argv[++i];
             }
 			else{
 				fprintf(stderr, "Option %s not recognized. Exiting...\n", argv[i]+2);

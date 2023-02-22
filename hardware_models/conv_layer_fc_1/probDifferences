@@ -1,0 +1,60 @@
+#!/bin/python3
+
+import os
+import sys
+import math
+from pprint import pprint
+
+def find(path, name):
+    res = []
+    for el in os.scandir(path):
+        if el.is_dir():
+            res.extend(find(el, name))
+        elif el.name.find(name) >= 0:
+            res.append(el)
+    return res if res!=[] else []
+
+def getProbs(fileName):
+    f = open(fileName, "r")
+    line = f.readline()
+    f.close()
+    probs = [int(i) for i in line.split(" ")[:-1]]
+    maxProb = max(probs)
+    maxIndex = probs.index(maxProb)
+    return [probs, maxProb, maxIndex]
+
+if __name__ == "__main__":
+	
+    if len(sys.argv) < 2:
+        print("""Error! No arguments given!
+			Usage: probDifferences goldProbFile faultyDir""")
+        exit(-1)
+
+    # g stands for golden
+    [gProbs, gMax, gIndex] = getProbs( sys.argv[1] );
+    
+    # print(gProbs)
+    # print(gMax)
+    # print(gIndex)
+    
+    dirList = [];
+    for arg in sys.argv[2:]:
+        dirList.extend( find(arg, "probabilities.txt") )
+
+    stats = {"masked" : 0, "safe": 0, "unsafe":0, "total": 0}
+    for el in dirList:
+        [probs, maxp, ind] = getProbs(el)
+            
+        type = ""
+        if ind == gIndex and maxp == gMax:
+            type="masked"
+        elif ind == gIndex and abs( (maxp-gMax)/100 ) < .5:
+            type="safe"
+        else:
+            type="unsafe"
+
+        stats[type] = stats[type] + 1
+        stats["total"] = stats["total"] + 1
+
+    pprint(stats)
+

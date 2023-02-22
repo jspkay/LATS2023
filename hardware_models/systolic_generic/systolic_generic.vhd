@@ -92,7 +92,7 @@ architecture behavior of systolic_generic is
 	--signal north_tmp, west_tmp, east_tmp, south_tmp : std_logic;
 	component P is
 		generic( depth : positive := depth;
-			res_depth : positive := res_depth;
+			res_depth : positive := word;
 			is_north_signed : bit := is_north_signed;
 			is_west_signed : bit := is_west_signed );
 		port(

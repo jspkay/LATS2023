@@ -13,4 +13,7 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim.wlf opened as dataset "vsim"
-add wave -position insertpoint vsim:/tb/CL/channels_generate(1)/C/systolicArray/rows_generate(1)/cols_generate(1)/P11/P_mat/*
+add wave -position insertpoint  \
+vsim:/tb/CL/channels_generate(1)/C/result
+add wave -position insertpoint  \
+vsim:/tb/CL/channels_generate(1)/C/write_finish

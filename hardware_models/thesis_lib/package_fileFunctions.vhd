@@ -45,16 +45,14 @@ package body fileFunctions is
 			case filetype is
 				when textual => read(l, rr);
 					res(counter) := to_signed(rr, depth);
-					report "depth: " & integer'image(depth) & " value: " & integer'image(rr)
-						severity note;
 				when hexadecimal => hread(l, res(counter));
 				when octal => oread(l, res(counter));
 				when binary => report "Not implemented yet!" severity Error;
 			end case;
 			counter := counter + 1;
 			if counter > res'high then
-				report "The file " & filename & " contains more data than the size of ther rom (2^"&integer'image(addrDepth)&")."
-				severity failure;
+				report "The file " & filename & " contains more data than the size of ther rom (2^"&integer'image(addrDepth)&"). The rest will be ignored."
+				severity warning;
 				exit;
 			end if;
 		end loop;

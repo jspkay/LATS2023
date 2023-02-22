@@ -11,8 +11,8 @@
 
 #include <stdlib.h>
 #include <opts.h>
+//#include <dirent.h>
 #include <errno.h>
-#include <ctype.h>
 
 static DATA_T conv1_data[CONV1_NB_OUTPUTS][CONV1_OUTPUTS_HEIGHT][CONV1_OUTPUTS_WIDTH];
 static DATA_T pool1_data[POOL1_NB_OUTPUTS][POOL1_OUTPUTS_HEIGHT][POOL1_OUTPUTS_WIDTH];
@@ -42,16 +42,20 @@ if( OPT_SAVE_FIRST_LAYER_INPUT ){
 	DIR* dir = opendir(OPT_SFLI_DIR);
 	if( errno == ENOENT ){
 		fprintf(stderr, "Directory %s doesn't exist. Making the new dir\n", OPT_SFLI_DIR);
-        exit(2);
+		mkdir(OPT_SFLI_DIR, 774);
 	}
 
 	char filename[100];
 
 	// main sequence
 	sprintf(filename, "./%s/HW_SIM_MAIN_SEQ.DAT", OPT_SFLI_DIR);
-	fprintf(stderr, "Writing MAIN Image sequence file...");
+	fprintf(stderr, "Writing Image sequence file...");
 	fp = fopen(filename, "w");
 	if(fp == NULL) fprintf(stderr, "Error opening the file");
+
+	//fprintf(fp, "#size\n%d %d\n", ENV_SIZE_X, CONV1_KERNEL_HEIGHT);
+	//fprintf(fp, "#main_seq\n");
+
 	int outputs=0;
 	for(int j=0; j<ENV_SIZE_X; j++)
 	    for(int k=0; k<CONV1_KERNEL_HEIGHT; k++){
@@ -61,9 +65,29 @@ if( OPT_SAVE_FIRST_LAYER_INPUT ){
 	    }
 	fclose(fp);
 	fprintf(stderr, "OK\n");
-    // Complete sequences
+
+	// Partial sequences - USELESS for now
+	/*fprintf(stderr, "Writing Image PARTIAL sequences files...");
+	for(int i=1; i<CONV1_OUTPUTS_HEIGHT; i++){
+	    sprintf(filename, "./%s/HW_SIM_SEQ_%d.DAT", OPT_SFLI_DIR, i+1);
+	    fp = fopen(filename, "w");
+	    if(fp == NULL) fprintf(stderr, "Error opening the file");
+
+	    //fprintf(fp, "#size\n%d %d\n", ENV_SIZE_X, CONV1_KERNEL_HEIGHT);
+	    //fprintf(fp, "#seq_%d\n", i);
+
+	    outputs=0;
+	    int j=CONV1_KERNEL_HEIGHT + i - 1;
+	    for(int k=0; k<ENV_SIZE_X; k++){
+	    	fprintf(fp, "%d\n", in_data[outputs][j][k] );
+	    }
+	    fclose(fp);
+	}
+	fprintf(stderr, "OK\n"); */
+
+	// Complete sequences
     fprintf(stderr, "Writing Image sequences files...");
-    for(int seq=1; seq<CONV1_OX_SIZE; seq++){
+	for(int seq=1; seq<CONV1_OX_SIZE; seq++){
         sprintf(filename, "./%s/HW_SIM_SEQ_%d.DAT", OPT_SFLI_DIR, seq+1);
         fp = fopen(filename, "w");
         if(fp == NULL) fprintf(stderr, "Error opening the file");
@@ -78,33 +102,7 @@ if( OPT_SAVE_FIRST_LAYER_INPUT ){
         fclose(fp);
     }
     fprintf(stderr, "OK\n");
-
-    // Reduced sequences
-    fprintf(stderr, "Writing Image REDUCED sequences files...");
-    for(int frame=0; frame<4; frame++) {
-
-        for(int seq=0; seq<CONV1_OX_SIZE/2; seq++){
-            sprintf(filename, "./%s/HW_SIM_RED_%d_SEQ_%d.DAT", OPT_SFLI_DIR, frame, seq+1);
-            fp = fopen(filename, "w");
-            if(fp == NULL) fprintf(stderr, "Error opening the file");
-
-            int firstJ = frame%2 ? ENV_SIZE_X/2-CONV1_KERNEL_WIDTH/2 : 0;
-            int lenghtJ = CONV1_OX_SIZE/2 + CONV1_KERNEL_WIDTH - 1;
-
-            int firstK = frame/2 ? ENV_SIZE_Y/2-CONV1_KERNEL_HEIGHT/2 : 0;
-            firstK += seq;
-
-            for(int j=firstJ; j<firstJ+lenghtJ; j++)
-                for(int k=firstK; k<CONV1_KERNEL_HEIGHT+firstK; k++){
-
-                    fprintf(fp, "%d\n", in_data[outputs][k][j]);
-
-                }
-
-            fclose(fp);
-        }
-    }
-	fprintf(stderr, "OK\n");
+    fprintf(stderr, "OK\n");
 }
 
     // weights
@@ -143,45 +141,8 @@ if( OPT_SAVE_FIRST_LAYER_INPUT ){
         }
     }
 
-    if( !OPT_FIRST_LAYER_FROM_FILE)
-        convcell_upropagate(CONV1_NB_CHANNELS, CONV1_CHANNELS_HEIGHT, CONV1_CHANNELS_WIDTH, CONV1_PADDING_Y, CONV1_PADDING_X, CONV1_STRIDE_Y, CONV1_STRIDE_X, CONV1_SUB_SAMPLE_Y, CONV1_SUB_SAMPLE_X, in_data, CONV1_OY_SIZE, CONV1_OX_SIZE, CONV1_NB_OUTPUTS, CONV1_OUTPUTS_HEIGHT, CONV1_OUTPUTS_WIDTH, CONV1_NB_OUTPUTS, CONV1_OUTPUT_OFFSET, conv1_data, CONV1_KERNEL_HEIGHT, CONV1_KERNEL_WIDTH, conv1_biases, conv1_weights, CONV1_ACTIVATION, CONV1_SHIFT);
-    else {
-        char tmp_string[100];
-        FILE *fp;
-        for (int i = 0; i < CONV1_NB_OUTPUTS; i++) {
-            sprintf(tmp_string, "%s/%s%d%s", OPT_FLFF_DIR, "HW_SIM_ACTIVATED_", i+1,".DAT");
-            fp = fopen(tmp_string, "r");
-            if(fp == NULL){
-                if (fp == NULL){
-                    fprintf(stderr, "eheh, there was an error in opening the DAT file (--first-layer-from-file)\n");
-                    exit(3);
-                }
-            }
 
-            int row = 0, col = 0;
-            uint16_t c;
-            uint16_t v = 0;
-            while(!feof(fp)){
-                c = fgetc(fp);
-                if(c == ' '){
-                    conv1_data[i][row][col] = *( (DATA_T*) &v);
-                    col++;
-                    v = 0;
-                }
-                else if(c == '\n'){
-                    row++;
-                    col = 0;
-                }
-                else if(isxdigit(c)){
-                    v *= (DATA_T) 16;
-                    if(c >= '0' && c <= '9') v = v + c - '0';
-                    else if(c >= 'A' && c <= 'F') v += c-'A'+10;
-                    else if(c >= 'a' && c <= 'f') v += c-'a'+10;
-                }
-            }
-            fclose(fp);
-        }
-    }
+    convcell_upropagate(CONV1_NB_CHANNELS, CONV1_CHANNELS_HEIGHT, CONV1_CHANNELS_WIDTH, CONV1_PADDING_Y, CONV1_PADDING_X, CONV1_STRIDE_Y, CONV1_STRIDE_X, CONV1_SUB_SAMPLE_Y, CONV1_SUB_SAMPLE_X, in_data, CONV1_OY_SIZE, CONV1_OX_SIZE, CONV1_NB_OUTPUTS, CONV1_OUTPUTS_HEIGHT, CONV1_OUTPUTS_WIDTH, CONV1_NB_OUTPUTS, CONV1_OUTPUT_OFFSET, conv1_data, CONV1_KERNEL_HEIGHT, CONV1_KERNEL_WIDTH, conv1_biases, conv1_weights, CONV1_ACTIVATION, CONV1_SHIFT);
 
     // activated outputs
     if(OPT_SAVE_FIRST_LAYER_OUTPUT){
@@ -334,21 +295,6 @@ if( OPT_SAVE_FIRST_LAYER_INPUT ){
    gettimeofday(&start, NULL);
 #endif
     fccell_upropagate(FC2_NB_CHANNELS, fc1_data, OUTPUTS_SIZE*NB_OUTPUTS, FC2_NB_OUTPUTS, FC2_OUTPUT_OFFSET, output_data, fc2_biases, fc2_weights, FC2_ACTIVATION, FC2_SHIFT);
-
-
-    if(OPT_SAVE_PROB_VEC) {
-        FILE * fp = fopen(OPT_SPV_FILENAME, "w");
-        if(fp == NULL){
-            fprintf(stderr, "Cannot open file %s. Exit.", OPT_SPV_FILENAME);
-            exit(3);
-        }
-        for(int i=0; i<NB_OUTPUTS*OUTPUTS_HEIGHT*OUTPUTS_WIDTH; i++){
-            fprintf(fp, "%d ", output_data[i]);
-        }
-        fclose(fp);
-
-    }
-
 #ifdef TIME_ANALYSIS
     gettimeofday(&end, NULL);
     static RUNNING_MEAN_T fc2_timing = {0.0, 0};

@@ -9,11 +9,11 @@ CMakeFiles/N2D2_export_C_Core.dir/src/n2d2.c.o: \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/bits/time64.h /usr/include/bits/dirent.h \
   /usr/include/bits/dirent_ext.h \
-  /usr/lib64/clang/15.0.4/include/stddef.h \
-  /usr/lib64/clang/15.0.4/include/stdint.h /usr/include/stdint.h \
+  /usr/lib64/clang/14.0.0/include/stddef.h \
+  /usr/lib64/clang/14.0.0/include/stdint.h /usr/include/stdint.h \
   /usr/include/bits/libc-header-start.h /usr/include/bits/wchar.h \
   /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
-  /usr/include/stdio.h /usr/lib64/clang/15.0.4/include/stdarg.h \
+  /usr/include/stdio.h /usr/lib64/clang/14.0.0/include/stdarg.h \
   /usr/include/bits/types/__fpos_t.h \
   /usr/include/bits/types/__mbstate_t.h \
   /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
@@ -27,6 +27,6 @@ CMakeFiles/N2D2_export_C_Core.dir/src/n2d2.c.o: \
   /home/salvo/Documenti/Tesi/CNN_model/export_C_int8/include/typedefs.h \
   /home/salvo/Documenti/Tesi/CNN_model/export_C_int8/include/params.h \
   /home/salvo/Documenti/Tesi/CNN_model/export_C_int8/include/utils.h \
-  /usr/include/assert.h /usr/lib64/clang/15.0.4/include/limits.h \
-  /usr/include/limits.h /usr/lib64/clang/15.0.4/include/stdbool.h \
+  /usr/include/assert.h /usr/lib64/clang/14.0.0/include/limits.h \
+  /usr/include/limits.h /usr/lib64/clang/14.0.0/include/stdbool.h \
   /home/salvo/Documenti/Tesi/CNN_model/export_C_int8/include/opts.h

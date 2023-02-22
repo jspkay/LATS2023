@@ -1,6 +1,6 @@
 #!/bin/sh
 
-fault_campaign_id=2
+fault_campaign_id=1
 
 if [[ -z ${1+c} ]]
 then

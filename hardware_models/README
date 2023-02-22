@@ -24,9 +24,3 @@ In order to execute a campaign, you need to have three binaries in your path:
 
 For building each of those, refer to the related README.
 
-# PhD update
-The same experiments have been updated for another study. In this context we will study the reliability of the systolic architecture with respect to its area. Three experiments are performed, always with 1'200 faults on 1'000 (most probably 500) stimuli.
-1. 28x28 array
-2. 14x14 array
-3. 7x7 array
-4. 3x3 array
