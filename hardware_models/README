@@ -4,6 +4,7 @@ There are different levels of complexity, depending on the
 The main project contains all the folders named `conv_layer[_fc_x]` where `_fc_` indicates whether a fault campain was conducted and the `x` indicates the type of campain as explained in the next section
 
 ## Fault campaings
+
 The faults campaigns are in the folders `conv_layer_fc_x`. In the following there is a list associating each value of `x` with the specific campaign. In addition to that, in each folder `conv_laery_fc_x` you can find a `README` file explaining in detail the contucted study.
 
 1. The faults are stuck-at and are injected in the input of the weights for some processing elements.
@@ -12,9 +13,11 @@ The faults campaigns are in the folders `conv_layer_fc_x`. In the following ther
 
 
 ## How to run
+
 The each fault campaing has its own "start_fault_campaign" executable. It is a bash script which iterates over each fault for each stimuli saving the results in a specific directory.
 
 In order to execute a campaign, you need to have three binaries in your path:
+
 - sub (which is a custom program for computing differences between two files which have the same format),
 - activate (which is a script to simulate the activation of the Convolutional layer,
 - fangy, the fault generator.
